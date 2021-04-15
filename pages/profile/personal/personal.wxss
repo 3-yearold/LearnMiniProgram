@@ -1,0 +1,243 @@
+/* 头部 */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 400rpx;
+  align-items: center;
+  position: relative;
+}
+
+.header-bg{
+  width: 100%;
+  height: 100%;
+}
+
+/* 名称和头像 */
+.userContent{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header-avatar {
+  overflow: hidden;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 30rpx;
+  border-radius: 50%;
+  margin-top: 4%;
+  
+}
+.header-nickname {
+  color: #fff;
+  font-size: 40rpx;
+  
+}
+/* 标题分类 */
+.headline{
+  height: 80rpx;
+  width:50%;
+  background-color: #cbcbcb;
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  font-size: smaller;
+}
+.active{
+  color: #0083ff;
+  /* font-size: medium; */
+}
+.main{
+  width: auto;
+  height: 1000rpx;
+}
+/* 卡片 */
+
+.article_box {
+  padding: 20rpx 20rpx;
+  background-color: #fff;
+  margin-top: 30rpx;
+  width: 85%;
+  margin-left: 5%;
+  box-shadow: 0rpx 0rpx 15rpx 5rpx #f2f2f2;
+  border-radius: 10rpx;
+  height: 30%;
+}
+
+.article_head {
+  height: 20%;
+}
+
+.article_headphoto {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.article_user {
+  float: left;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  line-height: 50rpx;
+}
+
+.article_book {
+  float: right;
+  font-size: 20rpx;
+  line-height: 50rpx;
+  color: #b0b0b0;
+  margin-right: 5rpx;
+}
+
+.article_body {
+  height: 72%;
+}
+
+.article_text {
+  font-size: 23rpx;
+  float: left;
+  width: 95%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.text2{
+  font-size: 28rpx;
+  color:#fff;
+  float: left;
+  margin-top:70rpx;
+  margin-left: -50rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.text1{
+  font-size:28rpx;
+}
+.article_bookcap {
+  height: 63%;
+  float: left;
+  /* border: 1px solid; */
+  margin-top: 20rpx;
+  width: 94%;
+  padding: 0rpx;
+  margin-left: 3%;
+  border-radius: 10rpx;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+}
+
+.article_bookphoto {
+  float: left;
+  width: 115rpx;
+  height: 160rpx;
+  /* margin-top: 20rpx; */
+  margin-left: 20rpx;
+}
+
+.book_message {
+  width: 67%;
+  margin-left: 20rpx;
+}
+.like{
+  margin-top: 10%;
+}
+.book_title {
+  font-size: 30rpx;
+}
+
+.book_writer {
+  margin-top: 25rpx;
+  font-size: 25rpx;
+  color: #999999;
+}
+
+.article_bookgo {
+  float: right;
+  width: 20rpx;
+  height: 30rpx;
+}
+
+.article_footer {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.article_love {
+  width: 40rpx;
+  height: 35rpx;
+}
+
+.article_comment {
+  width: 37rpx;
+  height: 35rpx;
+}
+
+.article_repeat {
+  width: 37rpx;
+  height: 35rpx;
+}
+
+
+.article_bookcap a {
+  float: left;
+  width: 65%;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  font-size: 30rpx;
+}
+.AddTime{
+  height: 80rpx;
+  width:50%;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.circle{
+  float: left;
+  margin: 3%;
+  width: 50rpx;
+  height: 50rpx;
+}
+.num1{
+  word-break:break-all;
+  font-size: x-large;
+  float: left;
+  margin-right: 3%;
+}
+.num2{
+  font-size: x-small;
+  justify-content:flex-end;
+  flex-direction: row-reverse;
+}
+.maincontent{
+  margin:auto;
+  width: 80%;
+  height: 250rpx;
+  background-color:#fefefe;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  border-radius: 5%;
+}

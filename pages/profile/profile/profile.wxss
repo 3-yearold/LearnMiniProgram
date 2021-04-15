@@ -1,0 +1,129 @@
+/* pages/profile/profile.wxss */
+.PageSetup{
+  width: auto;
+  /* height: 60%; */
+  background-color: #687483;
+}
+.moreover{
+  height: 100rpx;
+  
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b1b8bd;
+  /* background-color: aqua; */
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin-top: 6%;
+  margin-bottom:3%;
+  border-radius: 50%;
+}
+.userlabel{
+  /* background-color: pink; */
+  margin-top: 15%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center; 
+}
+.userlabel >text{
+  margin: 2%;
+  font-size: 28rpx;
+  font-weight: 100;
+  color: #b1b8bd;
+  border:3px solid #b1b8bd;
+  border-radius: 25%;
+  padding:8rpx;
+  border-width:1.5px;
+  font-family: FangSong;
+  letter-spacing: 3rpx;
+}
+.content{
+  width: auto;
+  background-color: #f2f3f4;
+  /* margin-top:1%; */
+  height: 500px;
+  border-radius: 3%;
+  padding:0px;
+  margin:0px;
+  padding:0%;
+}
+.categroy{
+  background-color: #ffffff;
+  height: 60rpx;
+  padding:2%;
+  border-radius: 5%;
+  width: auto;
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+
+}
+.btn1{
+  background-color: #ffffff;
+  border-radius: 98rpx;
+  float: left;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  color: #c9c9c9;
+}
+.font1{
+  font-size: 25rpx;
+  font-weight: bold;
+  letter-spacing: 3rpx;
+  float: left;
+}
+.btnImg {
+  width: 20rpx;
+  height: 20rpx; 
+  margin-left: 9rpx;
+}
+.btn1:hover{
+  background-color: #f0f1f2;
+  color: #000000;
+}
+.main{
+  height: 300rpx;
+  width: auto;
+  /* background-color: antiquewhite;  */
+}
+.AddTime{
+  height: 80rpx;
+  width:50%;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+.circle{
+  float: left;
+  margin: 3%;
+  width: 50rpx;
+  height: 50rpx;
+}
+.num1{
+  word-break:break-all;
+  font-size: x-large;
+  float: left;
+  margin-right: 3%;
+}
+.num2{
+  font-size: x-small;
+  justify-content:flex-end;
+  flex-direction: row-reverse;
+}
+.maincontent{
+  margin:auto;
+  width: 80%;
+  height: 250rpx;
+  background-color:#fefefe;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  border-radius: 5%;
+}

@@ -1,0 +1,74 @@
+/* pages/details/details.wxss */
+.xq{
+  height: 350rpx;
+}
+.shu{
+  width: 250rpx;
+  height: 300rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.sm{
+    float: left;
+    font-size: 36rpx;
+    margin-top: 70rpx;
+    margin-left: 50rpx;
+}
+.zz{
+    float: left;
+    margin-top: 140rpx;
+    margin-left: -70rpx;
+    font-size: 30rpx;
+    color: silver;
+}
+.pf{
+    float: left;
+    width: 50rpx;
+    height: 50rpx;
+}
+.xj{
+  float: left;
+  margin-left: -210rpx;
+  margin-top: 200rpx;
+}
+.fs{
+  float: left;
+  line-height: 50rpx;
+}
+.jj{
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+  font-size: 40rpx;
+  width: 80rpx;
+  font-weight: 550;
+  border: 10rpx solid blue;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+.jianjie{
+  width: 94%;
+  height: 350rpx;
+  /* background: red; */
+  margin-left: 3%;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+  border-radius: 40rpx;
+}
+.wenzhang{
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}
+.sp{
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  font-size: 40rpx;
+  width: 80rpx;
+  font-weight: 550;
+  border: 10rpx solid blue;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}

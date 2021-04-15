@@ -1,0 +1,110 @@
+<view class="header-container">
+      <image mode='aspectFill' class='header-bg' src = '/ative/profileimg/banner1.png'></image>
+      <view class='userContent'>
+        <block wx:if="{{canIUseOpenData}}">
+        <view class="header-avatar" bindtap="bindViewTap">
+          <open-data type="userAvatarUrl" class="user"></open-data>
+        </view>
+        <open-data class="header-nickname" type="userNickName"></open-data>
+        </block>
+        <!-- <view class='header-userInfo'>
+          <text>19岁</text>
+          <text>深圳市</text>
+          <text>学生</text>
+          <text>开朗</text>
+        </view> -->
+        <text class="text2">\n 19 | 深圳市 | 学生 | 开朗</text>
+      </view>
+      
+    </view>
+<!-- 导航栏组件 -->
+<w-tab-control titles="{{titles}}"
+                bind:tabclick="handleTabClick"/>
+<!-- 内容 -->
+<swiper current="{{currentTab}}" class="main">
+  <swiper-item>
+    <view class="AddTime">
+        <image class="circle" src="/ative/profileimg/circle.png" alt=""></image>
+        <view class="num1">2 </view><view class="num2">04月 2021年</view>
+      </view>
+    <view class="article_box">
+          <view class="article_body">
+            <view class="article_text text1"  bindtap="details">
+              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+            </view>
+            <view class="article_bookcap like">
+              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
+              <view class="book_message">
+                <view class="book_title">挪威的森林</view>
+                <view class="book_writer">村上春树</view>
+              </view>
+              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class="AddTime">
+        <image class="circle" src="/ative/profileimg/circle.png" alt=""></image>
+        <view class="num1">2 </view><view class="num2">04月 2021年</view>
+      </view>
+    <view class="article_box">
+          <view class="article_body">
+            <view class="article_text text1"  bindtap="details">
+              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+            </view>
+            <view class="article_bookcap like">
+              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
+              <view class="book_message">
+                <view class="book_title">挪威的森林</view>
+                <view class="book_writer">村上春树</view>
+              </view>
+              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
+            </view>
+          </view>
+        </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="article_box">
+          <view class="article_head">
+            <image class="article_headphoto" src="/ative/profileimg/header.png"></image>
+            <view class="article_user">曾兆育</view>
+            <view class="article_book">14:37</view>
+            <view class="article_book">2021-04-16</view>
+          </view>
+          <view class="article_body">
+            <view class="article_text"  bindtap="details">
+              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+            </view>
+            <view class="article_bookcap">
+              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
+              <view class="book_message">
+                <view class="book_title">挪威的森林</view>
+                <view class="book_writer">村上春树</view>
+              </view>
+              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class="article_box">
+          <view class="article_head">
+            <image class="article_headphoto" src="/ative/profileimg/header.png"></image>
+            <view class="article_user">曾兆育</view>
+            <view class="article_book">14:37</view>
+            <view class="article_book">2021-04-16</view>
+          </view>
+          <view class="article_body">
+            <view class="article_text"  bindtap="details">
+              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+            </view>
+            <view class="article_bookcap">
+              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
+              <view class="book_message">
+                <view class="book_title">挪威的森林</view>
+                <view class="book_writer">村上春树</view>
+              </view>
+              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
+            </view>
+          </view>
+        </view>
+        
+  </swiper-item>
+</swiper>

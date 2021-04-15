@@ -1,0 +1,66 @@
+<view class="title">
+  <swiper indicator-dots indicator-color="#fff" indicator-active-color="blue" circular>
+  <swiper-item>
+  <image src="/ative/homeimg/nsdjb.jpg" class="banner"></image>
+  </swiper-item>
+  <swiper-item class="boy">
+  <image src="/ative/homeimg/boy.jpg" class="banner"></image>
+  </swiper-item>
+  <swiper-item class="boy">
+  <image src="/ative/homeimg/nsdjb.jpg" class="banner"></image>
+  </swiper-item>  
+  </swiper>
+</view>
+<view class="container">
+  <view>
+    <image src="/ative/homeimg/hz.jpg" class="containerimg"></image>
+    <view class="sm">活着</view>
+    <view>
+    <image src="/ative/homeimg/diyi.jpg" class="dy"></image>
+    </view>
+    <view class="zz">余华 | 长篇小说</view>
+    <view class="jianjie">在大时代背景下，随着内战</view>
+    <view class="jianjie">三反五反，大跃进，文化。</view>
+  </view>
+  <view class="er">
+    <image src="/ative/homeimg/hz.jpg" class="containerimg"></image>
+    <view class="sm">活着</view>
+    <view>
+    <image src="/ative/homeimg/dier.jpg" class="dy"></image>
+    </view>
+    <view class="zz">毛姆 | 长篇小说</view>
+    <view class="jianjie">在大时代背景下，随着内战</view>
+    <view class="jianjie">三反五反，大跃进，文化。</view>
+  </view>
+  <view class="er"> 
+    <image src="/ative/homeimg/ylylbs.jpg" class="containerimg"></image>
+    <view class="sm">活着</view>
+    <view>
+    <image src="/ative/homeimg/disan.jpg" class="dy"></image>
+    </view>
+    <view class="zz">余华 | 长篇小说</view>
+    <view class="jianjie">在大时代背景下，随着内战</view>
+    <view class="jianjie">三反五反，大跃进，文化。</view>
+  </view>
+  <view class="er">
+    <image src="/ative/homeimg/ylylbs.jpg" class="containerimg"></image>
+    <view class="sm">活着</view>
+    <view>
+    <image src="/ative/homeimg/diyi.jpg" class="dy"></image>
+    </view>
+    <view class="zz">余华 | 长篇小说</view>
+    <view class="jianjie">在大时代背景下，随着内战</view>
+    <view class="jianjie">三反五反，大跃进，文化。</view>
+  </view>
+  <view class="er">
+    <image src="/ative/homeimg/ylylbs.jpg" class="containerimg"></image>
+    <view class="sm">活着</view>
+    <view>
+    <image src="/ative/homeimg/diyi.jpg" class="dy"></image>
+    </view>
+    <view class="zz">余华 | 长篇小说</view>
+    <view class="jianjie">在大时代背景下，随着内战</view>
+    <view class="jianjie">三反五反，大跃进，文化。</view>
+  </view>
+
+</view>

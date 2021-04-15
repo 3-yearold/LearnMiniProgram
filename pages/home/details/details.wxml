@@ -1,0 +1,21 @@
+<view class="xq">
+  <image src="/ative/homeimg/hz.jpg" class="shu"></image>
+  <view class="sm">活着</view>
+  <view class="zz">余华 | 长篇小说</view>
+  <view class="xj">
+    <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+    <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+    <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+    <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+    <image src="/ative/homeimg/star.jpg" class="pf"></image>
+    <view class="fs">9.0分</view>
+  </view>
+</view>
+<view class="jj">简介</view>
+<view class="jianjie">
+  <view class="wenzhang">
+  这是一个历尽世间沧桑和磨难老人的人生感言，是一幕演绎人生苦难经历的戏剧。小说的叙述者"我"
+  在年轻时获得了一个游手好闲的职业——去乡间收集民间歌谣。在夏天刚刚来到的季节，遇到那位名叫福贵的老人，听他讲述了自己坎坷的人生经历:地主少爷福贵嗜赌成性。
+  </view>
+</view>
+<view class="sp">书评</view>

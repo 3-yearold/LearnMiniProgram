@@ -1,0 +1,47 @@
+<!--pages/classification/classification.wxml-->
+<view class="ss">
+  <image src="/ative/homeimg/search.jpg" class="ssicon"></image>
+  <input type="text" value="搜索好书/作者"></input>
+</view>
+<view class='productNav'>
+  <!-- 左侧 -->
+  <view class='left'>
+    <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>文学</view>
+    <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>历史地理</view>
+    <view class="{{active==2?'selected':'normal'}}" id="2" bindtap='switchNav'>生物科学</view>
+    <view class="{{active==2?'selected':'normal'}}" id="3" bindtap='switchNav'>医药卫生</view>
+    <view class="{{active==2?'selected':'normal'}}" id="4" bindtap='switchNav'>艺术</view>
+    <view class="{{active==2?'selected':'normal'}}" id="5" bindtap='switchNav'>语言文学</view>
+    <view class="{{active==2?'selected':'normal'}}" id="6" bindtap='switchNav'>数理科学</view>
+    <view class="{{active==2?'selected':'normal'}}" id="7" bindtap='switchNav'>军事</view>
+
+  </view>
+  <!-- 右侧 -->
+  <view class='right'>
+    <view class='type'>
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper current='{{currentTab}}' vertical='{{true}}'>
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0" catchtouchmove="false">
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+
+        </swiper-item>
+        <swiper-item id="1" catchtouchmove="false">
+          手机
+        </swiper-item>
+        <swiper-item id="2" catchtouchmove="false">
+          电脑
+        </swiper-item>
+      </swiper> 
+    </view>
+  </view>
+</view>

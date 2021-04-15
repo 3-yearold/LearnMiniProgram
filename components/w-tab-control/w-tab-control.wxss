@@ -1,0 +1,27 @@
+/* components/w-tab-control/w-tab-control.wxss */
+.tab-control{
+  /* display: flex; */
+  height: 80rpx;
+  width:100%;
+  background-color: #cbcbcb;
+  color:#fff;
+  display: flex;
+  flex-direction:space-between;
+  justify-content: center;
+  align-items: center;
+  /* float: left; */
+  font-size: smaller;
+}
+.tab-item{
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  display: flex;
+  flex-direction:space-between;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  background-color: #0083ff;
+  /* font-size: medium; */
+}

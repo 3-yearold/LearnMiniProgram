@@ -1,0 +1,50 @@
+page{
+  background: #ddd;
+}
+.banner{
+  width: 80%;
+  height: 350rpx;
+  margin-left: 20rpx;
+}
+.boy{ 
+  margin-left: -100rpx;
+}
+.container{
+  width: 92%;
+  height: 1700rpx;
+  background: white;
+  margin-left: 4%;
+  margin-top: 3%;
+}
+.containerimg{
+  width: 250rpx;
+  height: 300rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  float: left;
+}
+.sm{
+  float: left;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  font-size: 38rpx;
+}
+.zz{
+  float: left;
+  margin-top: 100rpx;
+  margin-left: -80rpx;
+}
+.jianjie{
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+}
+.dy{
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  margin-top: 40rpx;
+}
+.er{
+  float: left;
+}

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/home/classification/classification",
+    "pages/home/details/details",
+    "pages/home/phb/phb",
+    "pages/profile/personal/personal",
+    "pages/profile/profile/profile",
+    "pages/share/category/category",
+    "pages/share/details/details",
+    "pages/share/search/search",
+    "pages/share/profile/profile"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#5ba7fc",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "图书管理系统",
+    "backgroundColor": "#ff567a",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#5ba7fc",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "首页",
+        "iconPath": "ative/tarbar/home.png",
+        "selectedIconPath": "ative/tarbar/home2.png"
+      },
+      {
+        "pagePath": "pages/share/category/category",
+        "text": "社区",
+        "iconPath": "ative/tarbar/comunity.png",
+        "selectedIconPath": "ative/tarbar/comunity2.png"
+      },
+      {
+        "pagePath": "pages/profile/personal/personal",
+        "text": "我的",
+        "iconPath": "ative/tarbar/me.png",
+        "selectedIconPath": "ative/tarbar/me2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

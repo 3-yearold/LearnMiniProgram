@@ -1,0 +1,65 @@
+<!--pages/category/category.wxml-->
+<view class="custom-bar">
+  <view class="custom-bar__wrapper"
+    style="margin-top:{{searchMarginTop}}px; height: {{searchHeight}}px;width: {{searchWidth}}px">
+    <view class="search-group" bindtap="searchtitle">
+      <image src="/ative/shareimg/search.png" mode="aspectFit" />
+      <text class="search-group__input">搜索好书/作者</text>
+     <!--  <input class="search-group__input" auto-focus placeholder="输入点什么吧" /> -->
+    </view>
+  </view>
+</view>
+<view class="swiper-tab">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="swiper-tab-item {{currentTab==index ? 'active' : ''}}"
+    wx:key="unique" bindtap="navbarTap">{{item}}
+  </view>
+</view>
+<swiper class="article" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+  <swiper-item wx:for="{{navbar}}">
+    <scroll-view class="article" scroll-y="true">
+      <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
+        <view class="article_box">
+          <view class="article_head">
+            <image class="article_headphoto" src="/ative/shareimg/head.jpg"></image>
+            <view class="article_user">曾兆育</view>
+            <view class="article_book">14:37</view>
+            <view class="article_book">2021-04-16</view>
+          </view>
+          <view class="article_body">
+            <view class="article_text"  bindtap="details">
+              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+            </view>
+            <view class="article_bookcap">
+              <image class="article_bookphoto" src="/ative/shareimg/book.jpg"></image>
+              <view class="book_message">
+                <view class="book_title">挪威的森林</view>
+                <view class="book_writer">村上春树</view>
+              </view>
+              <image class="article_bookgo" src="/ative/shareimg/go.png"></image>
+            </view>
+          </view>
+          <view class="article_footer">
+            <!--           <view style="display:flex;">
+            <image class="article_love" src="/ative/shareimg/love.png"></image>
+
+          </view> -->
+            <view style="display:flex;" bindtap='onLike'>
+              <image src="{{like?icon_like:icon_unlike}}" class="article_love" animation="{{animation}}"></image>
+              <text style="font-size: 25rpx; margin-left: 15rpx;">{{count}}</text>
+            </view>
+
+            <view style="display:flex; margin-left: 30%; margin-right: 25%;">
+              <image class="article_comment" src="/ative/shareimg/comment.png"></image>
+              <text style="font-size: 25rpx; margin-left: 15rpx;">20</text>
+            </view>
+            <view style="display:flex;">
+              <image class="article_repeat" src="/ative/shareimg/repeat.png"></image>
+              <text style="font-size: 25rpx; margin-left: 15rpx;">20</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+    </scroll-view>
+  </swiper-item>
+</swiper>

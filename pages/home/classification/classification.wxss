@@ -1,0 +1,57 @@
+/* pages/classification/classification.wxss */
+.ss{
+  width: 90%;
+  height: 60rpx;
+  border-radius: 40rpx;
+  margin-left: 5%;
+  border: 1px solid black;
+}
+.ssicon{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.ss input{
+  margin-top: 5rpx;
+  text-align: center;
+}
+.productNav{
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei"
+}
+.left{
+  width: 25%;
+  font-size: 30rpx;
+  background-color: #f4f4f4;
+}
+.left view{
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.selected{
+  background-color: #fff;
+  border-left: 2px solid #E54847;
+  font-weight: bold;
+  color: #E54847;
+}
+.normal{
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #f2f2f2;
+}
+.right{
+  width:75%;
+  margin: 0;
+}
+swiper{
+  height: 500px;
+}
+.swimg{
+  width: 150rpx;
+  height: 200rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
