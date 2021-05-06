@@ -119,14 +119,14 @@
 }
 .hs{
   margin-left: 40rpx;
-  width: 200rpx;
+  width: 185rpx;
   height: 300rpx;
 }
 .haoshu{
   float: left;
 }
 .sm{
-  margin-left: 40rpx;
+  margin-left: 20rpx;
 }
 .jxhs{
   width: 240rpx;

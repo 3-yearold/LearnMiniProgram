@@ -42,7 +42,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.16.0",
   "appid": "wxd98e43123e09a9de",
-  "projectname": "miniprogram-1",
+  "projectname": "library",
   "debugOptions": {
     "hidedInDevtools": []
   },
