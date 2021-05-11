@@ -62,6 +62,19 @@ Page({
 details: function() {
   wx.navigateTo({
     url: '/pages/share/details/details'
+  }),
+  wx.request({
+    url: 'http://xinyun.1473.cn/Request.php',
+    method: 'POST',
+    data: {
+      res: 'select_allbook'
+    },
+    header: {
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    success: (result) => {
+      console.log(result)
+    },
   })
 },
 
