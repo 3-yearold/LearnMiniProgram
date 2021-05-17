@@ -19,7 +19,8 @@ Page({
     icon_like: '/ative/shareimg/loves.png',
     icon_unlike: '/ative/shareimg/love.png',
     like:false, //是否已点赞
-    count:0
+    count:0,
+    userInfo: 1
   },
   onLike(e) {
 
@@ -67,7 +68,7 @@ details: function() {
     url: 'http://xinyun.1473.cn/Request.php',
     method: 'POST',
     data: {
-      res: 'select_allbook'
+      res: 'select_somebook,上'
     },
     header: {
       'content-type': 'application/x-www-form-urlencoded'

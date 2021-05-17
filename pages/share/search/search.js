@@ -49,7 +49,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://xinyun.1473.cn/Request.php',
+      method: 'POST',
+      data: {
+        res: 'select_allbook'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: (result) => {
+        console.log(result)
+      },
+    })
   },
 
   /**

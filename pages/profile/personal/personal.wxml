@@ -107,4 +107,7 @@
         </view>
         
   </swiper-item>
+  <swiper-item>
+    <button bindtap='borrowing' id="9787010032184">借阅</button>
+  </swiper-item>
 </swiper>

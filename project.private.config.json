@@ -13,14 +13,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/category/category",
-          "pathName": "pages/category/category",
+          "name": "pages/share/category/category",
+          "pathName": "pages/share/category/category",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/aaa/aaa",
-          "pathName": "pages/aaa/aaa",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
@@ -31,8 +31,9 @@
           "scene": null
         },
         {
-          "name": "pages/search/search",
-          "pathName": "pages/search/search",
+          "name": "pages/profile/personal/personal",
+          "pathName": "pages/profile/personal/personal",
+          "query": "",
           "scene": null
         }
       ]

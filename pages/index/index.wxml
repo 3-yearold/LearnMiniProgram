@@ -1,0 +1,37 @@
+<view class="container">
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="uname">
+      <view class="unametitle">姓名</view>
+      <view class="weui-cell__bd" style="margin: 30rpx 0" >
+        <input class="weui-input" name="uname" placeholder="这是一个输入框" />
+      </view>
+    </view>
+    <view class="sex">
+      <view class="sextitle">性别</view>
+      <radio-group name="radio">
+        <label><radio value="男"/>男</label>
+        <label><radio value="女"/>女</label>
+      </radio-group>
+    </view>
+    <view class="age">
+      <view class="agetitle">年龄</view>
+      <view class="weui-cell__bd" style="margin: 30rpx 0" >
+        <input class="weui-input" name="age" placeholder="这是一个输入框" />
+      </view>
+    </view>
+    <view class="identity">
+      <view class="identitytitle">身份</view>
+      <view class="weui-cell__bd" style="margin: 30rpx 0" >
+        <input class="weui-input" name="identity" placeholder="这是一个输入框" />
+      </view>
+    </view>
+    <view class="character">
+      <view class="charactertitle">性格</view>
+      <view class="weui-cell__bd" style="margin: 30rpx 0" >
+        <input class="weui-input" name="character" placeholder="这是一个输入框" />
+      </view>
+    </view>
+    <button style="margin: 30rpx 0" type="primary" formType="submit">提交</button>
+    <!-- <button open-type="getUserInfo">获取</button> -->
+  </form>
+</view>
