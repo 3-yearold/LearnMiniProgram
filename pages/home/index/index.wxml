@@ -21,18 +21,20 @@
     <text class="user-motto">{{motto}}</text>
   </view> -->
   <view class="ss">
+    <navigator url="../../share/search/search">
     <view>
       <image src="/ative/homeimg/search.jpg/" class="ssicon"></image>
       <view class="gjz"><input>搜索好书/读者</input></view>
     </view>
+  </navigator>
   </view>
-  <view class="dh">
-    <view class="dhfl" id="sy">推荐</view>
-    <view class="dhfl">历史</view>
-    <view class="dhfl">文学</view>
-    <view class="dhfl">地理</view>
-    <view class="dhfl">科幻</view>
+  
+  <view class="swiper-tab">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="swiper-tab-item {{currentTab==index ? 'active' : ''}}"
+    wx:key="unique" bindtap="navbarTap">{{item}}
   </view>
+</view>
+
   <view class="gg">
     <swiper indicator-dots indicator-color="#fff" indicator-active-color="blue" autoplay interval="3000" circular>
       <swiper-item>
@@ -48,16 +50,17 @@
   </view>
 <view class="fl">
   <view class="flbox">
-    <navigator url="/pages/phb/phb"><image src="/ative/homeimg/paihangbang.jpg" class="flimg"></image>
+    <navigator url="/pages/home/phb/phb"><image src="/ative/homeimg/paihangbang.jpg" class="flimg"></image>
     <view class="fltext">排行榜</view>
     </navigator>
   </view>
   <view class="flbox">
-    <image src="/ative/homeimg/zuixin.jpg" class="flimg"></image>
+    <navigator url="/pages/home/new/new"><image src="/ative/homeimg/zuixin.jpg" class="flimg"></image>
     <view class="fltext">最新上架</view>
+  </navigator>
   </view>
   <view class="flbox">
-    <navigator url="/pages/classification/classification"><image src="/ative/homeimg/fenlei.jpg" class="flimg"></image>
+    <navigator url="/pages/home/classification/classification"><image src="/ative/homeimg/fenlei.jpg" class="flimg"></image>
     <view class="fltext">分类</view>
   </navigator>
   </view>
@@ -71,20 +74,53 @@
   <view class="zstj">专属推荐</view>
   <view class="more">更多></view>
 </view>
-<view class="tuijian">
-<view class="haoshu">
-  <image src="/ative/homeimg/ylylbs.jpg" class="hs"></image>
-  <view class="sm">月亮与六便士</view>
+
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
+
+  <view style=" display: inline-block" >
+    <navigator url="../../home/details/details">
+    <view class="haoshu">
+  <image src="/ative/homeimg/hz.jpg" class="hs"></image>
+  <view class="sm">活着</view>
 </view>
-<view class="haoshu">
+</navigator>
+  </view>
+  
+
+  <view style=" display: inline-block">
+    <view class="haoshu">
   <image src="/ative/homeimg/pdsdj.jpg" class="hs"></image>
   <view class="sm">坡道上的家</view>
 </view>
-<view class="haoshu">
+</view>
+
+  <view style="display: inline-block">
+    <view class="haoshu">
   <image src="/ative/homeimg/lbqdgcb.jpg" class="hs"></image>
   <view class="sm">了不起的盖茨比</view>
 </view>
-</view>
+  </view>
+
+  <view style=" display: inline-block">
+    <view class="haoshu">
+      <image src="/ative/homeimg/hdlz.jpg" class="hs"></image>
+      <view class="sm">哈德良传</view>
+    </view>
+  </view>
+  <view style=" display: inline-block">
+    <view class="haoshu">
+      <image src="/ative/homeimg/qjfs.jpg" class="hs"></image>
+      <view class="sm">全境封锁</view>
+    </view>
+  </view>
+  <view style=" display: inline-block">
+    <view class="haoshu">
+      <image src="/ative/homeimg/tydjd.jpg" class="hs"></image>
+      <view class="sm">讨厌的京都</view>
+    </view>
+  </view>
+
+</scroll-view>
 <view class="zs">
   <view class="zstj">精选热门</view>
   <view class="more">更多></view>
@@ -169,16 +205,16 @@
 </view>
 <view class="tuijian">
 <view class="haoshu">
-  <image src="/ative/homeimg/ylylbs.jpg" class="hs"></image>
-  <view class="sm">月亮与六便士</view>
+  <image src="/ative/homeimg/sy.png" class="hs"></image>
+  <view class="sm">鼠疫</view>
 </view>
 <view class="haoshu">
-  <image src="/ative/homeimg/pdsdj.jpg" class="hs"></image>
-  <view class="sm">坡道上的家</view>
+  <image src="/ative/homeimg/qjfs.jpg" class="hs"></image>
+  <view class="sm">全境封锁</view>
 </view>
 <view class="haoshu">
-  <image src="/ative/homeimg/lbqdgcb.jpg" class="hs"></image>
-  <view class="sm">了不起的盖茨比</view>
+  <image src="/ative/homeimg/my.jpg" class="hs"></image>
+  <view class="sm">民谣</view>
 </view>
 </view>
 <view class="tuijian">

@@ -4,6 +4,8 @@ const app = getApp()
 Page({
   data: {
     motto: 'Hello World',
+    navbar: ['推荐', '历史','文学','地理','科幻'],
+    currentTab:0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -14,6 +16,12 @@ Page({
   bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
     })
   },
   onLoad() {

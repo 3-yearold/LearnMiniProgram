@@ -1,6 +1,12 @@
 <view class="xq">
   <image src="/ative/homeimg/hz.jpg" class="shu"></image>
   <view class="sm">活着</view>
+  <view class="jie" bindtap="show">借阅</view>
+  <view class="modal-box" hidden="{{flag}}" bindtap="hide">
+  <view class="modal-body">
+    <view class="modal-content">借阅成功</view>
+  </view>
+  </view>
   <view class="zz">余华 | 长篇小说</view>
   <view class="xj">
     <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
@@ -19,3 +25,24 @@
   </view>
 </view>
 <view class="sp">书评</view>
+<view class="t">(34条)</view>
+<view class="write">写书评</view>
+<view class="pj">
+  <image src="/ative/homeimg/tx.png" class="tx"></image>
+  <view class="id">吃饭吃太多</view>
+  <view class="pingjia">不要说余华的言语冰冷啊，在我看来《活着》也有它温情的地方。余华给了福贵一个朋友，他们互相感激,同时也互相仇恨，却谁也无法抛弃对方,同时谁也没有理由抱怨对方。这就是命运。人是为活着本身而活着的,而不是为了活着之外的任何事物所活着。</view>
+</view>
+<view class="pj">
+  <image src="/ative/homeimg/tx.png" class="tx"></image>
+  <view class="id">吃饭吃太多</view>
+  <view class="pingjia">当你需要的或是想要的没有实现时，不要轻易地泪丧和失落。因为你已经做到了为人一生中最有意义的一件事那使是-活着。</view>
+</view>
+<view class="all">查看全部书评</view>
+<view>
+<view class="cai">猜你喜欢</view>
+<view class="you">
+  <image src="/ative/homeimg/ylylbs.jpg" class="like"></image>
+  <image src="/ative/homeimg/pdsdj.jpg" class="like"></image>
+  <image src="/ative/homeimg/lbqdgcb.jpg" class="like"></image>
+</view>
+</view>

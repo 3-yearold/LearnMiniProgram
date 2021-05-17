@@ -55,3 +55,20 @@ swiper{
   margin-top: 30rpx;
   margin-left: 20rpx;
 }
+
+.swiper-tab {
+  width: 25%;
+  font-size: 30rpx;
+  background-color: #f4f4f4;
+}
+
+.swiper-tab-item {
+  display: inline-block;
+  width: 20%;
+  color: black;
+}
+
+.active {
+  color: #5ba7fc;
+  border-bottom: 4rpx solid#5ba7fc;
+}

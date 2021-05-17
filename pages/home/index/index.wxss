@@ -19,7 +19,6 @@
 } */
 .top{
   width: 100%;
-  background: #cccccc;
 }
 .ss{
   background: white;
@@ -50,19 +49,13 @@
   background: white;
 }
 .dhfl{
-  height: 50rpx;
   float: left;
   text-align: center;
-  font-size: 28rpx;
-  line-height: 70rpx;
-  padding-left: 20rpx;
-}
-#sy{
+  line-height: 60rpx;
   font-size: 32rpx;
   margin-left: 40rpx;
   width: 100rpx;
   height: 60rpx;
-  border-bottom: 10rpx solid blue;
 }
 .banner{
   width: 95%;
@@ -119,14 +112,18 @@
 }
 .hs{
   margin-left: 40rpx;
-  width: 185rpx;
+  width: 200rpx;
   height: 300rpx;
+  display: inline-block;
+
 }
 .haoshu{
   float: left;
+  display: inline-block;
 }
 .sm{
-  margin-left: 20rpx;
+  margin-left: 40rpx;
+  font-size: 30rpx;
 }
 .jxhs{
   width: 240rpx;
@@ -171,4 +168,23 @@
 }
 .jianjie{
   font-size: 28rpx;
+}
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #ffffff;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}
+
+.swiper-tab-item {
+  display: inline-block;
+  width: 20%;
+  color: black;
+}
+
+.active {
+  color: #5ba7fc;
+  border-bottom: 4rpx solid#5ba7fc;
 }

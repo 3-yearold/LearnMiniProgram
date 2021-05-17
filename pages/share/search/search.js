@@ -1,4 +1,7 @@
 // pages/search/search.js
+var app =getApp();
+var search = ''
+
 Page({
 
   /**
@@ -6,60 +9,56 @@ Page({
    */
   data: {
     historyList: [],     // 历史记录
-    hotList: ['菩提珠串', '金石/拓片', '翡翠原石', '和田玉', '邮票', '珍珠'],    // 热门推荐
+    content_Show:true,
+    phbook:[],
+    search:[],
+    ph:[],
   },
- //点击切换
- clickTab: function( e ) { 
-  
-  var that = this; 
- 
-  if( this.data.currentTab === e.target.dataset.current ) { 
-   return false; 
-  } else { 
-   that.setData( { 
-    currentTab: e.target.dataset.current 
-   }) 
-  } 
- } ,
- getInput: function (e) {
-   this.setData({
-     val: e.detail.value
-   })
-   if (this.data.val.length > 0) {
-     this.setData({
-       isSearch: false,
-       isClear: true
-     })
-   } else {
-     this.setData({
-       isSearch: true,
-       isClear: false
-     })
-   }
- },
 
- clearTap: function () {
-   this.setData({
-     val: "",
-     isSearch: true,
-     isClear: false
-   })
- },
+  changeSearch: function(e) {
+    let that = this;
+    var inputSearch = e.detail.value;
+    that.setData({
+      search: inputSearch
+    })
+    console.log(e)
+    wx.request({
+      url: 'http://xinyun.1473.cn/Request.php',
+      method:'POST',
+      data:{
+        res:'select_somebook,' + inputSearch
+      },
+      header:{
+        'content-type':'application/x-www-form-urlencoded'
+      },
+      success: (result) => {
+        console.log(result)
+      },
+    })
+  },
+
+searchinput:function(e){
+  
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     wx.request({
       url: 'http://xinyun.1473.cn/Request.php',
-      method: 'POST',
-      data: {
-        res: 'select_allbook'
+      method:'POST',
+      data:{
+        res:'select_somebook,'
       },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
+      header:{
+        'content-type':'application/x-www-form-urlencoded'
       },
-      success: (result) => {
-        console.log(result)
+      success: (res) => {
+        console.log(res)
+        const phbook = res.data;
+        this.setData({
+          phbook : phbook
+        })
       },
     })
   },

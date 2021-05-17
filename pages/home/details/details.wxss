@@ -1,4 +1,4 @@
-/* pages/details/details.wxss */
+pages/details/details.wxss
 .xq{
   height: 350rpx;
 }
@@ -50,7 +50,6 @@
 .jianjie{
   width: 94%;
   height: 350rpx;
-  /* background: red; */
   margin-left: 3%;
   margin-top: 10rpx;
   line-height: 60rpx;
@@ -71,4 +70,100 @@
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
+  float: left;
 }
+.t{
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 60rpx;
+}
+.write{
+  float: right;
+  color: blue;
+  font-weight: 550;
+  margin-top: 60rpx;
+  margin-right: 50rpx;
+}
+.pj{
+  margin-top: 120rpx;
+}
+.tx{
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.id{
+  float: left;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
+.pingjia{
+  float: left;
+  margin: 20rpx 30rpx 20rpx 30rpx;
+}
+.all{
+    width: 100%;
+    height: 80rpx;
+    background: #eef3ff;
+    font-size: 30rpx;
+    color: blue;
+    float: left;
+    text-align: center;
+    line-height: 80rpx;
+    margin-top: 40rpx;
+}
+.cai{
+  float: left;
+  font-size: 40rpx;
+  font-weight: 550;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+}
+.you{
+  float: left;
+}
+.like{
+  width: 220rpx;
+  height: 300rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.jie{
+  width: 100rpx;
+    height: 50rpx;
+    border: 1px blue solid;
+    border-radius: 20rpx;
+    margin-top: 60rpx;
+    position: absolute;
+    margin-left: 600rpx;
+    text-align: center;
+}
+
+.modal-box {
+  position: fixed;
+  width: 300rpx;
+  height: 100rpx;
+  margin-top: 500rpx;
+  margin-left: 200rpx;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-content {
+  /* width: 60%; */
+  overflow: hidden;
+  border-radius: 25rpx;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+}
+

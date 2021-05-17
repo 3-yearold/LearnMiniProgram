@@ -1,0 +1,23 @@
+<view class="body">
+  <view class="shufirst">
+    <image src="/ative/homeimg/hz.jpg" class="shu"></image>
+    <view class="sm">活着</view>
+    <image src="/ative/homeimg/new.jpg" class="new"></image>
+    <view class="zz">余华 | 长篇小说</view>
+    <view class="jianjie">在夏天刚刚来到的季节，遇到那位名叫福贵的老人，听他讲了自己坎坷的人生经历:地主少爷福贵嗜赌成性，终于赌光家业，一贫如洗。</view>
+  </view>
+  <view class="shufirst">
+    <image src="/ative/homeimg/sy.png" class="shu"></image>
+    <view class="sm">鼠疫</view>
+    <image src="/ative/homeimg/new.jpg" class="new"></image>
+    <view class="zz">[俄]列夫·托尔斯泰</view>
+    <view class="jianjie">讲述阿尔及利亚的奥兰发生瘟疫，突如其来的瘟疫让人不知所措。政客狂妄无知，掩饰诿过，甚至想利用灾难来获取利益;原来过着委靡不振生活的小人物，凭著黑市门路.</view>
+  </view>
+  <view class="shufirst">
+    <image src="/ative/homeimg/ylylbs.jpg" class="shu"></image>
+    <view class="sm">月亮与六便士</view>
+    <image src="/ative/homeimg/new.jpg" class="new"></image>
+    <view class="yzz">[英]毛姆 |长篇小说</view>
+    <view class="jianjie">人生如梦，让我们枕着月亮一百多年前，奥斯卡·王尔德写下这样的话:“我不想谋生。我想生活。”这简直可以拿来概括《月亮与六便士》这部小说。一位家庭美满.</view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+/* pages/new/new.wxss */
+page{
+  background: #ecececf5;
+}
+.shufirst{
+  width: 95%;
+  height: 320rpx;
+  background: white;
+  margin: 2.5%;
+  margin-top: 150rpx;
+}
+.shu{
+  width: 200rpx;
+  height: 250rpx;
+  margin-top: -120rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.sm{
+  float: left;
+  font-size: 40rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+.zz{
+  padding-top: 80rpx;
+  float: left;
+  margin-left: -80rpx;
+  color: #919191;
+}
+.jianjie{
+  float: left;
+  width: 95%;
+  margin: 2.5%;
+}
+.new{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 110rpx;
+  margin-top: 20rpx;
+}
+.yzz{
+  float: left;
+  margin-left: 47rpx;
+  color: #919191;
+}

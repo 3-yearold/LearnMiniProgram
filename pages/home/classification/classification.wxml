@@ -1,19 +1,21 @@
 <!--pages/classification/classification.wxml-->
+<navigator url="../../share/search/search">
 <view class="ss">
   <image src="/ative/homeimg/search.jpg" class="ssicon"></image>
   <input type="text" value="搜索好书/作者"></input>
 </view>
+</navigator>
 <view class='productNav'>
   <!-- 左侧 -->
   <view class='left'>
-    <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>文学</view>
-    <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>历史地理</view>
-    <view class="{{active==2?'selected':'normal'}}" id="2" bindtap='switchNav'>生物科学</view>
-    <view class="{{active==2?'selected':'normal'}}" id="3" bindtap='switchNav'>医药卫生</view>
-    <view class="{{active==2?'selected':'normal'}}" id="4" bindtap='switchNav'>艺术</view>
-    <view class="{{active==2?'selected':'normal'}}" id="5" bindtap='switchNav'>语言文学</view>
-    <view class="{{active==2?'selected':'normal'}}" id="6" bindtap='switchNav'>数理科学</view>
-    <view class="{{active==2?'selected':'normal'}}" id="7" bindtap='switchNav'>军事</view>
+    <view>文学</view>
+    <view>历史地理</view>
+    <view>生物科学</view>
+    <view>医药卫生</view>
+    <view>艺术</view>
+    <view>语言文学</view>
+    <view>数理科学</view>
+    <view>军事</view>
 
   </view>
   <!-- 右侧 -->
@@ -25,14 +27,13 @@
         <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
         <swiper-item id="0" catchtouchmove="false">
           <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/pdsdj.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/sy.png" class="swimg"></image>
+          <image src="/ative/homeimg/my.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/tydjd.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/ylylbs.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/qjfs.jpg" class="swimg"></image>
+          <image src="/ative/homeimg/pysdmx.jpg" class="swimg"></image>
 
         </swiper-item>
         <swiper-item id="1" catchtouchmove="false">

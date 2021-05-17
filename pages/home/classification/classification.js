@@ -5,12 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    motto: 'Hello World',
+    navbar: ['文学', '历史地理','医药卫生','艺术','语言文学','数理科学','军事'],
+    currentTab:0,
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUseGetUserProfile: false,
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
   onLoad: function (options) {
 
   },

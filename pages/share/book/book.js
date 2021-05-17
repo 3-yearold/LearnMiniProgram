@@ -1,4 +1,4 @@
-// pages/details/details.js
+// pages/share/book/book.js
 Page({
 
   /**
@@ -11,46 +11,8 @@ Page({
     halfSrc: '/ative/shareimg/star.png',
     icon_like: '/ative/shareimg/loves.png',
     icon_unlike: '/ative/shareimg/love.png',
-    like:false, //是否已点赞
-    count:0
   },
-  onLike(e) {
 
-    wx.vibrateShort() //手机振动API
-
-
- this.animation = wx.createAnimation({
-   duration: 300, // 动画持续时间，单位 ms
-   timingFunction: 'linear', // 动画的效果
-   delay: 10, // 动画延迟时间，单位 ms
-   transformOrigin: '50% 50%' // 动画的中心点
- })
-
-
- let like = this.properties.like
- let count = this.properties.count
-
- count = like ? count - 1 : count + 1
-
- if (!like) {
-   setTimeout(function () {
-
-     this.animation.scale(1.5).step();
-     this.animation.scale(1.0).step();
-
-     this.setData({
-       animation: this.animation.export()
-     });
-
-   }.bind(this), 50);
- }
-
- this.setData({
-   count,
-   like: !like
- })
-
-},
   /**
    * 生命周期函数--监听页面加载
    */

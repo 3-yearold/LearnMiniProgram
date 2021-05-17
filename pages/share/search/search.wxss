@@ -10,6 +10,7 @@ page {
     width: 100%;
     z-index: 100;
     position: fixed;
+    border-top: 1rpx solid #efefef;
 }
 
 .search-group {
@@ -55,7 +56,7 @@ page {
 }
 
 .good{
-  padding: 10rpx 55rpx;
+  padding: 40rpx 55rpx;
   float: left;
   width: 100%;
   height: 65%;
@@ -75,7 +76,7 @@ page {
 
 .book_card text {
   float: left;
-  width: 70%;
+  width: 68%;
   margin-top: 20rpx;
   margin-left: 25rpx;
   display: -webkit-box;

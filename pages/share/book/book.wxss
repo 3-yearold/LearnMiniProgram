@@ -1,0 +1,140 @@
+page {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.book{
+/*   height: 60%; */
+  width: 100%;
+  border-top: 1rpx solid #efefef;
+}
+
+.book_head {
+  height: 18%;
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.book_headphoto {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  float: left;
+  margin-left: 55rpx;
+}
+
+.book_user {
+  float: left;
+  font-size: 31rpx;
+  margin-left: 20rpx;
+}
+
+.book_book{
+  width: 100%;
+    height: 34%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25rpx;
+}
+
+.hot_book_box{
+  width: 88%;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.book2{
+  width: 200rpx;
+  height: 292rpx;
+  float: left;
+  border-radius: 15rpx;
+}
+
+.book_card{
+  width: 50%;
+  float: right;
+  margin-left: 40rpx;
+}
+
+.book_card text {
+  float: left;
+  width: 100%;
+}
+
+.book_name{
+  color: #545454;
+}
+
+
+.book_writer{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #999999;
+}
+
+.book_score{
+  color: #999999;
+}
+
+.starbox{
+  display: flex;
+}
+.startext {
+  font-size: 14px;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #353535;
+}
+.imgbox {
+  flex: 1;
+  position: relative;
+  width: 550rpx;
+}
+.star-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.book_core{
+  float: left;
+  width: 85%;
+  line-height: 35rpx;
+}
+
+.book_core1{
+  float: right;
+  font-size: 30rpx;
+  color: #b0b0b0;
+  margin-right: 20rpx;
+}
+
+.book_content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 35rpx;
+}
+
+.book_text{
+  width: 87%;
+  font-size: 32rpx;
+}
+
+.book_releasetime{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20rpx;
+}
+
+.book_time{
+  width: 87%;
+  font-size: 25rpx;
+  color: #a0a0a0;
+}

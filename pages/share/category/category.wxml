@@ -5,7 +5,6 @@
     <view class="search-group" bindtap="searchtitle">
       <image src="/ative/shareimg/search.png" mode="aspectFit" />
       <text class="search-group__input">搜索好书/作者</text>
-     <!--  <input class="search-group__input" auto-focus placeholder="输入点什么吧" /> -->
     </view>
   </view>
 </view>
@@ -31,7 +30,7 @@
             </view>
             <view class="article_bookcap">
               <image class="article_bookphoto" src="/ative/shareimg/book.jpg"></image>
-              <view class="book_message">
+              <view class="book_message" bindtap="book">
                 <view class="book_title">挪威的森林</view>
                 <view class="book_writer">村上春树</view>
               </view>

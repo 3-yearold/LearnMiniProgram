@@ -1,0 +1,25 @@
+<view class="book">
+  <view class="book_book">
+    <view class="hot_book_box">
+      <image src="/ative/shareimg/book2.png" class="book2"></image>
+      <view class="book_card">
+        <text class="book_name">活着</text>
+        <text class="book_writer">余华 | 长篇小说</text>
+        <view class="book_core">
+          <block wx:for="{{stars}}" wx:key="{{item}}">
+            <image class="star-image" src="{{halfSrc}}">
+            </image>
+          </block>
+          <view class="book_core1">10.0</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="book_content">
+    <view class="book_synopsis">简介</view>
+    <view class="book_text">
+      这是一个历尽世间沧桑和磨难老人的人生感言，是一幕演绎人生苦难经历的戏剧。小说的叙述者“我"在年轻时获得了一个游手好闲的职业——去乡间收集民间歌谣。在夏天刚刚来到的季节，遇到那位名叫福贵的老人，听他讲述了自己坎坷的人生经历:地主少爷福贵嗜赌成性，终于赌光了家业，一贫如洗，穷困之中福贵因母亲生病前去求医，没想到半路上被国民党部队抓了壮丁，后被解放军所俘虏，回到家乡他才知道母亲已经过世，妻子家珍含辛茹苦带大了一双儿女但女儿不幸变成了哑巴。
+    </view>
+  </view>
+</view>
+

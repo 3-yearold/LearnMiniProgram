@@ -1,11 +1,10 @@
 <!--pages/search/search.wxml-->
-<view style="background-color:#efefef; height:1rpx">
-</view>
 <view class="search_head">
   <view class="search-group" bindtap="searchtitle">
-  <image src="/ative/shareimg/search.png" mode="aspectFit" />
-  <input class="search-group__input" auto-focus placeholder="搜索好书/作者" />
-</view>
+    <image src="/ative/shareimg/search.png" mode="aspectFit" />
+    <input class="search-group__input" auto-focus placeholder="搜索好书/作者" value='{{search}}' bindblur='changeSearch'
+      bindconfirm='changeSearch' bindinput='changeSearch' bindtap="searchinput" />
+  </view>
 </view>
 
 <view class="historysearch">
@@ -16,94 +15,25 @@
   <view class="historybook">活着</view>
   <view class="historybook">麦田里的守望者</view>
   <view class="historybook">彷徨</view>
-<!--   <view class="historybook">三年高考，五年模拟</view>
+  <!--   <view class="historybook">三年高考，五年模拟</view>
   <view class="historybook">麦田里的守望者</view>
   <view class="historybook">彷徨</view>
   <view class="historybook">三年高考，五年模拟</view> -->
 </view>
 <view class="good">
   <text style="font-size: 40rpx; float: left; width: 100%;">精选热门</text>
-  <scroll-view scroll-y="true">
+  <!-- <scroll-view scroll-y="true"> -->
+  <block wx:for="{{phbook}}">
     <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
+      <text style="float: left; margin-right: 25rpx">{{index+1}}</text>
+      <image src="{{item.Bookimgurl}}" class="book2"></image>
       <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
+        <text>{{item.BookName}}</text>
+        <text class="book_writer">{{item.Author}}</text>
+        <text class="book_body">{{item.BookIntroduce}}</text>
       </view>
     </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-    <view class="hot_book_box">
-      <text style="float: left; margin-right: 25rpx;">1</text>
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
-      <view class="book_card">
-        <text>活着</text>
-        <text class="book_writer">余华 | 长篇小说</text>
-        <text class="book_body">在大时代背景下，随着内战、三反五反，大跃进，文化...</text>
-      </view>
-    </view>
-  </scroll-view>
+  </block>
+
+  <!-- </scroll-view> -->
 </view>

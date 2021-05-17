@@ -1,19 +1,12 @@
-// pages/details/details.js
+// pages/new/new.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    flag: true,  
+
   },
-  show: function () {     
-    this.setData({ flag:false})
-     },  
-  //消失   
-  hide: function () {     
-    this.setData({ flag: true})   
-},
 
   /**
    * 生命周期函数--监听页面加载

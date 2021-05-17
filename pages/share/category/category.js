@@ -19,8 +19,8 @@ Page({
     icon_like: '/ative/shareimg/loves.png',
     icon_unlike: '/ative/shareimg/love.png',
     like:false, //是否已点赞
-    count:0,
-    userInfo: 1
+    count:0
+
   },
   onLike(e) {
 
@@ -63,19 +63,12 @@ Page({
 details: function() {
   wx.navigateTo({
     url: '/pages/share/details/details'
-  }),
-  wx.request({
-    url: 'http://xinyun.1473.cn/Request.php',
-    method: 'POST',
-    data: {
-      res: 'select_somebook,上'
-    },
-    header: {
-      'content-type': 'application/x-www-form-urlencoded'
-    },
-    success: (result) => {
-      console.log(result)
-    },
+  })
+},
+
+book: function() {
+  wx.navigateTo({
+    url: '/pages/share/book/book'
   })
 },
 
@@ -154,6 +147,7 @@ swiperTab:function( e ){
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+
     this.setData({
       menuButtonInfo: wx.getMenuButtonBoundingClientRect()
     })
@@ -185,6 +179,19 @@ swiperTab:function( e ){
             });  
         }  
     });
+    wx.request({
+      url: 'http://xinyun.1473.cn/Request.php',
+      method:'POST',
+      data:{
+        res:'select_allbook'
+      },
+      header:{
+        'content-type':'application/x-www-form-urlencoded'
+      },
+      success: (result) => {
+        console.log(result)
+      },
+    })
   },
 
 
