@@ -1,0 +1,27 @@
+.hs{
+  margin-left: 40rpx;
+  width: 200rpx;
+  height: 300rpx;
+  display: inline-block;
+
+}
+.haoshu{
+  float: left;
+  width: 30%;
+}
+.sm{
+  margin-left: 40rpx;
+  font-size: 30rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.title{
+  text-align: center;
+  font-size: 50rpx;
+  background: wheat;
+  margin: 20rpx;
+}

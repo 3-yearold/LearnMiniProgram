@@ -1,13 +1,13 @@
 <!--pages/search/search.wxml-->
 <view class="search_head">
   <view class="search-group" bindtap="searchtitle">
-    <image src="/ative/shareimg/search.png" mode="aspectFit" />
+    <image src="http://xinyun.1473.cn/ative/shareimg/search.png" mode="aspectFit" />
     <input class="search-group__input" auto-focus placeholder="搜索好书/作者" value='{{search}}' bindblur='changeSearch'
       bindconfirm='changeSearch' bindinput='changeSearch' bindtap="searchinput" />
   </view>
 </view>
 
-<view class="historysearch">
+<view class="historysearch" wx:if="{{history}}">
   <text style="font-size: 40rpx; float: left; width: 100%;">历史搜索</text>
   <!-- <view bindtap="goSearch" data-val="{{item}}" wx:for="{{historyList}}" wx:key="{{index}}" class="historybook">{{item}}</view> -->
   <view class="historybook">天官赐福</view>
@@ -15,15 +15,14 @@
   <view class="historybook">活着</view>
   <view class="historybook">麦田里的守望者</view>
   <view class="historybook">彷徨</view>
-  <!--   <view class="historybook">三年高考，五年模拟</view>
-  <view class="historybook">麦田里的守望者</view>
-  <view class="historybook">彷徨</view>
-  <view class="historybook">三年高考，五年模拟</view> -->
 </view>
-<view class="good">
+<view class="hotspot" wx:if="{{hotspot}}">
   <text style="font-size: 40rpx; float: left; width: 100%;">精选热门</text>
+</view>
+
+<view class="good">
   <!-- <scroll-view scroll-y="true"> -->
-  <block wx:for="{{phbook}}">
+  <block wx:for="{{rankinglist}}">
     <view class="hot_book_box">
       <text style="float: left; margin-right: 25rpx">{{index+1}}</text>
       <image src="{{item.Bookimgurl}}" class="book2"></image>

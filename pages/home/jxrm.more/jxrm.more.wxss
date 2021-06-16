@@ -1,0 +1,64 @@
+.jxhs{
+  width: 240rpx;
+  height: 320rpx;
+  margin-left: 20rpx;
+  margin-top: -20rpx;
+  z-index: 1;
+  float: left;
+}
+.jxjj{
+  width: 95%;
+  margin: 20rpx;
+  height: 330rpx;
+  background: #fff;
+  border-radius: 20rpx; 
+  box-shadow:0 0 2rpx 2rpx #000;
+}
+.jj{
+  float: left;
+  margin-left: 40rpx;
+}
+.jjsm{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  width: 300rpx;
+}
+.jjpf{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.pf{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.xj{
+  font-size: 26rpx;
+  float: left;
+}
+.zz{
+  font-size: 25rpx;
+  /* float: left; */
+}
+.jianjie{
+  font-size: 28rpx;
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+}
+.title{
+  text-align: center;
+  font-size: 50rpx;
+  background: wheat;
+  margin: 20rpx;
+}

@@ -1,48 +1,36 @@
-<!--pages/classification/classification.wxml-->
-<navigator url="../../share/search/search">
-<view class="ss">
-  <image src="/ative/homeimg/search.jpg" class="ssicon"></image>
-  <input type="text" value="搜索好书/作者"></input>
-</view>
-</navigator>
 <view class='productNav'>
   <!-- 左侧 -->
-  <view class='left'>
-    <view>文学</view>
-    <view>历史地理</view>
-    <view>生物科学</view>
-    <view>医药卫生</view>
-    <view>艺术</view>
-    <view>语言文学</view>
-    <view>数理科学</view>
-    <view>军事</view>
-
-  </view>
+  <scroll-view class='left' scroll-y="true">
+    <view wx:for="{{navbar}}" bindtap="gaintypebook" data-index="{{item}}">{{item}}</view>
+  </scroll-view>
   <!-- 右侧 -->
-  <view class='right'>
-    <view class='type'>
-      <!-- current:当前所在滑块的 index -->
-      <!-- vertical:滑动方向是否为纵向 -->
-      <swiper current='{{currentTab}}' vertical='{{true}}'>
-        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
-        <swiper-item id="0" catchtouchmove="false">
-          <image src="/ative/homeimg/lbqdgcb.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/pdsdj.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/sy.png" class="swimg"></image>
-          <image src="/ative/homeimg/my.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/tydjd.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/ylylbs.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/qjfs.jpg" class="swimg"></image>
-          <image src="/ative/homeimg/pysdmx.jpg" class="swimg"></image>
-
-        </swiper-item>
-        <swiper-item id="1" catchtouchmove="false">
-          手机
-        </swiper-item>
-        <swiper-item id="2" catchtouchmove="false">
-          电脑
+  <!-- <view class='right'>
+      <swiper current='{{currentTab}}' vertical='{{true}}' style='height: 100vh'>
+        <swiper-item id="0" catchtouchmove="false" class="bookswit">
+          <view class="classification_Bookcard" wx:for="{{sort}}">
+            <image src="{{item.Bookimgurl}}" class="swimg"></image>
+            <view class="classification_BookName">{{item.BookName}}</view>
+          </view>
         </swiper-item>
       </swiper> 
+    </view> -->
+    <scroll-view class="nav_right" scroll-y="true">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{sort.length>0}}">
+      <block wx:for="{{sort}}" wx:key="{{index}}">
+        <view class="nav_right_items">
+        <!--界面跳转 -->
+          <image src="{{item.Bookimgurl}}" class="swimg"></image>
+          <text>{{item.BookName}}</text>
+        </view>
+      </block>
     </view>
-  </view>
+
+    <!--如果无数据，则显示数据-->
+    <view class="nocate" wx:else>
+      <image src="http://pic2.cxtuku.com/00/05/79/b863e9dcc935.jpg"></image>
+      <text>该分类暂无数据</text>
+    </view>
+    
+  </scroll-view>
 </view>

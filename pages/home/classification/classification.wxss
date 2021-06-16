@@ -1,26 +1,10 @@
-/* pages/classification/classification.wxss */
-.ss{
-  width: 90%;
-  height: 60rpx;
-  border-radius: 40rpx;
-  margin-left: 5%;
-  border: 1px solid black;
-}
-.ssicon{
-  width: 40rpx;
-  height: 40rpx;
-  float: left;
-  margin-left: 20rpx;
-  margin-top: 10rpx;
-}
-.ss input{
-  margin-top: 5rpx;
-  text-align: center;
-}
 .productNav{
   display: flex;
   flex-direction: row;
-  font-family: "Microsoft YaHei"
+  font-family: "Microsoft YaHei";
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 .left{
   width: 25%;
@@ -31,6 +15,16 @@
   text-align: center;
   height: 90rpx;
   line-height: 90rpx;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.left view:hover{
+  background-color: #646464;
 }
 .selected{
   background-color: #fff;
@@ -46,14 +40,33 @@
   width:75%;
   margin: 0;
 }
-swiper{
-  height: 500px;
+.bookswit{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 .swimg{
-  width: 150rpx;
-  height: 200rpx;
-  margin-top: 30rpx;
-  margin-left: 20rpx;
+  width: 100%;
+  height: 240rpx;
+}
+
+.classification_Bookcard{
+  width: 30%;
+  display: inline-block;
+  margin-bottom: 20rpx;
+}
+
+.classification_BookName{
+  font-size: 25rpx;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 .swiper-tab {
@@ -71,4 +84,52 @@ swiper{
 .active {
   color: #5ba7fc;
   border-bottom: 4rpx solid#5ba7fc;
+}
+
+
+.nav_right{
+  position:absolute;
+  top:0;
+  right:0;
+  width:75%;
+  height:100%;
+}
+ 
+.nav_right .nav_right_items{
+  float: left;   
+  width: 33.33%; 
+  text-align: center;  
+  padding:30rpx 0;
+} 
+.nav_right .nav_right_items image{
+  width: 120rpx;  
+  height: 150rpx; 
+} 
+.nav_right .nav_right_items text{
+  display: block;  
+  margin-top: 20rpx;  
+  font-size: 28rpx;  
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+} 
+.nocate{
+  padding:100rpx;
+  text-align: center;  
+} 
+ 
+.nocate image{
+  width:70rpx;
+  height:70rpx;
+}
+.nocate text{
+  font-size:28rpx;
+  display:block;
+  color:#BBB;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
 }

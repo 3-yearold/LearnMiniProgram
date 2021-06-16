@@ -1,7 +1,7 @@
 <!--pages/personal/personal.wxml-->
 <!-- <text>pages/personal/personal.wxml</text> -->
 <view class="header-container">
-      <image mode='aspectFill' class='header-bg' src = '/ative/profileimg/banner1.png'></image>
+      <image mode='aspectFill' class='header-bg' src = 'http://xinyun.1473.cn/ative/profileimg/banner1.png'></image>
       <view class='userContent'>
         <block wx:if="{{canIUseOpenData}}">
         <view class="header-avatar" bindtap="bindViewTap">
@@ -9,13 +9,9 @@
         </view>
         <open-data class="header-nickname" type="userNickName"></open-data>
         </block>
-        <!-- <view class='header-userInfo'>
-          <text>19岁</text>
-          <text>深圳市</text>
-          <text>学生</text>
-          <text>开朗</text>
-        </view> -->
-        <text class="text2">\n 19 | 深圳市 | 学生 | 开朗</text>
+        <block wx:key="item" wx:for="{{reader}}">
+        <text class="text2">\n {{item.Age}} | {{item.Sex}} | {{item.identity}} | {{item.character}}</text>
+        </block>
       </view>
       
     </view>
@@ -25,178 +21,125 @@
                 bind:tabclick="handleTabClick"/>
               </view>
 <!-- 内容 -->
-<swiper current="{{currentTab}}" class="main">
-  <swiper-item>
-    <view class="AddTime">
-        <image class="circle" src="/ative/profileimg/circle.png" alt=""></image>
+<swiper current="{{currentTab}}" class="main" >
+  <!-- 文章  改-->
+  <swiper-item  catchtouchmove="stopTouchMove">
+    <scroll-view style="height:{{contentHeight}}rpx;"scroll-y>
+    <!-- <view class="AddTime">
+        <image class="circle" src="http://xinyun.1473.cn/ative/profileimg/circle.png" alt=""></image>
         <view class="num1">2 </view><view class="num2">04月 2021年</view>
-      </view>
+      </view> -->
+      <block wx:for="{{mearticle}}" wx:key="index">
     <view class="article_box">
           <view class="article_body">
-            <view class="article_text text1"  bindtap="details">
-              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+            <view class="article_text"  bindtap="details">
+              {{item.content}}
             </view>
-            <view class="article_bookcap like">
-              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
+            <view class="article_bookcap">
+              <image class="article_bookphoto" src="{{item.Bookimgurl}}"></image>
               <view class="book_message">
-                <view class="book_title">挪威的森林</view>
-                <view class="book_writer">村上春树</view>
+                <view class="book_title">{{item.BookName}}</view>
+                <view class="book_writer">{{item.Author}}</view>
               </view>
-              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
+              <image class="article_bookgo" src="http://xinyun.1473.cn/ative/profileimg/go.png"></image>
             </view>
           </view>
         </view>
-        <view class="AddTime">
-        <image class="circle" src="/ative/profileimg/circle.png" alt=""></image>
-        <view class="num1">2 </view><view class="num2">04月 2021年</view>
-      </view>
-    <view class="article_box">
-          <view class="article_body">
-            <view class="article_text text1"  bindtap="details">
-              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
-            </view>
-            <view class="article_bookcap like">
-              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
-              <view class="book_message">
-                <view class="book_title">挪威的森林</view>
-                <view class="book_writer">村上春树</view>
-              </view>
-              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
-            </view>
-          </view>
-        </view>
+      </block>
+        </scroll-view>
   </swiper-item>
-  <swiper-item>
-    <block wx:key="item" wx:for="{{book}}">
+  <!-- 借阅中 -->
+  <swiper-item  catchtouchmove="stopTouchMove">
+    <scroll-view style="height:{{contentHeight}}rpx;"scroll-y>
+    <block wx:key="item" wx:for="{{borrowing}}">
     <view class="borrowbook">
-      <image class="borrow_bookphotp" src="/ative/profileimg/book.png" alt=""></image>
+      <image class="borrow_bookphotp" src="http://xinyun.1473.cn/upload/images/3a0f741fb6866513817b312d0f3b6a54.jpg" alt=""></image>
       <view class="borrow_top">
         <view class="borrow_topleft">
-          <view class="borrow_title">{{item.title}}</view>
-          <view class="borrow_write">{{item.writer}}<text class="writer">{{item.type}}</text></view>
-          <view class="borrow_time">借阅时间<text class="time">{{item.startime}}</text></view>
-          <view class="borrow_time">应还日期<text class="time">{{item.endtime}}</text></view>
+          <view class="borrow_title">{{item.BookName}}</view>
+          <view class="borrow_write">{{item.Author}}<text class="writer">{{item.type}}</text></view>
+          <view class="borrow_time">借阅时间<text class="time">{{item.BDate}}</text></view>
+          <view class="borrow_time">应还日期<text class="time">{{item.RDate}}</text></view>
         </view>
         <view class="borrow_button">
           <button class="btn1 btn" bindtap="renew" data-index="{{index}}">续借</button>
           <button class="btn1" bindtap="delItem" data-index="{{index}}" >归还</button>
         </view>
         <view class="borrow_lastime">
-          <text>还剩<text class="lastime">{{item.lastime}}</text>天</text>
+          <text>还剩<text class="lastime">{{item.LDate}}</text>天</text>
       </view>
       </view>
     </view>
   </block>
+  </scroll-view>
   </swiper-item>
-  <swiper-item >
-    <view>
-    <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
-    <block wx:key="item" wx:for="{{book}}">
-    <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
-        <view class="content">
-          <image class="card_bookphotp" src="/ative/profileimg/book.png" alt=""></image>
+  <!-- 收藏 -->
+  <swiper-item catchtouchmove="stopTouchMove">
+    <scroll-view style="height:{{contentHeight}}rpx;"scroll-y>
+    <block wx:for="{{book}}" wx:key="index">
+  <movable-area class='movable-area'>
+    <movable-view direction="horizontal" class='movable-view bg_white'>
+      <!-- 这里监听移动时间 -->
+      <view class="touch-item  {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+        <view class="getcontent" bindtap='toDetail' data-id="{{item.groupId}}">
+          <image class="card_bookphotp" src="http://xinyun.1473.cn/upload/images/3a0f741fb6866513817b312d0f3b6a54.jpg" alt=""></image>
           <view class="cardcontent">
-          <view class="card_booktitle">{{item.writer}}</view>
-              <view class="card_bookwrite">村上春村 | 长篇小说</view>
-              <view class="card_bookmesssge">曾经那个愿为我千千万万次捡风筝的</view>
+          <view class="card_booktitle">{{item.BookName}}</view>
+              <view class="card_bookwrite">{{item.Author}} | {{item.Public}}</view>
+              <view class="card_bookmesssge">{{item.BookIntroduce}}</view>
             </view>
         </view>
-        <view class="remove" bindtap="delItem" data-index="{{index}}">删除 </view>
-    </view>
-    </block>
+        <view class="del bg_blue font_size" bindtap="del" data-index="{{index}}">取消收藏</view>
+      </view>
+    </movable-view>
+  </movable-area>
+</block>
 </scroll-view>
-</view>
   </swiper-item>
-  <swiper-item>
-    <view class="record">
-      本周
-    </view>
-    <view class="recordbook">
+  <!-- 借阅记录 -->
+  <swiper-item  catchtouchmove="stopTouchMove">
+    <scroll-view style="height:{{contentHeight}}rpx;"scroll-y>
+      <block wx:key="item" wx:for="{{borrowing}}">
     <view class="borrowbook">
-      <image class="borrow_bookphotp" src="/ative/profileimg/book.png" alt=""></image>
+      <image class="borrow_bookphotp" src="http://xinyun.1473.cn/upload/images/3a0f741fb6866513817b312d0f3b6a54.jpg" alt=""></image>
       <view class="borrow_top">
         <view class="borrow_topleft">
-          <view class="borrow_title">活着</view>
-          <view class="borrow_write">余华<text class="writer">|</text><text class="writer">长篇小说</text></view>
-          <view class="borrow_time">借阅时间<text class="time">2021-04-16</text></view>
-          <view class="borrow_time">应还日期<text class="time">2021-04-16</text></view>
+          <view class="borrow_title">{{item.BookName}}</view>
+          <view class="borrow_write">{{item.Author}}</view>
+          <view class="borrow_time">借阅时间<text class="time">{{item.BDate}}</text></view>
+          <view class="borrow_time">还书日期<text class="time">{{item.RDate}}</text></view>
         </view>
       </view>
-    </view>
   </view>
-  <view class="record">
-      本月
-    </view>
-    <view class="recordbook">
-    <view class="borrowbook">
-      <image class="borrow_bookphotp" src="/ative/profileimg/book.png" alt=""></image>
-      <view class="borrow_top">
-        <view class="borrow_topleft">
-          <view class="borrow_title">活着</view>
-          <view class="borrow_write">余华<text class="writer">|</text><text class="writer">长篇小说</text></view>
-          <view class="borrow_time">借阅时间<text class="time">2021-04-16</text></view>
-          <view class="borrow_time">应还日期<text class="time">2021-04-16</text></view>
-        </view>
-      </view>
-    </view>
-  </view>
-    <view class="recordbook">
-    <view class="borrowbook">
-      <image class="borrow_bookphotp" src="/ative/profileimg/book.png" alt=""></image>
-      <view class="borrow_top">
-        <view class="borrow_topleft">
-          <view class="borrow_title">活着</view>
-          <view class="borrow_write">余华<text class="writer">|</text><text class="writer">长篇小说</text></view>
-          <view class="borrow_time">借阅时间<text class="time">2021-04-16</text></view>
-          <view class="borrow_time">应还日期<text class="time">2021-04-16</text></view>
-        </view>
-      </view>
-    </view>
-  </view>
+  </block>
+  </scroll-view>
   </swiper-item>
-  <swiper-item>
+  <!-- 喜欢 -->
+  <swiper-item  catchtouchmove="stopTouchMove">
+    <scroll-view style="height:{{contentHeight}}rpx;"scroll-y>
+    <block wx:for="{{article}}" wx:key="index">
     <view class="article_box">
           <view class="article_head">
-            <image class="article_headphoto" src="/ative/profileimg/header.png"></image>
-            <view class="article_user">曾兆育</view>
-            <view class="article_book">14:37</view>
-            <view class="article_book">2021-04-16</view>
+            <image class="article_headphoto" src="{{item.HeadPortrait}}"></image>
+            <view class="article_user">{{item.ReaderName}}</view>
+            <view class="article_book">{{item.likeCount}}</view>
           </view>
           <view class="article_body">
             <view class="article_text"  bindtap="details">
-              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
+              {{item.content}}
             </view>
             <view class="article_bookcap">
-              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
+              <image class="article_bookphoto" src="{{item.Bookimgurl}}"></image>
               <view class="book_message">
-                <view class="book_title">挪威的森林</view>
-                <view class="book_writer">村上春树</view>
+                <view class="book_title">{{item.BookName}}</view>
+                <view class="book_writer">{{item.Author}}</view>
               </view>
-              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
+              <image class="article_bookgo" src="http://xinyun.1473.cn/ative/profileimg/go.png"></image>
             </view>
           </view>
         </view>
-        <view class="article_box">
-          <view class="article_head">
-            <image class="article_headphoto" src="/ative/profileimg/header.png"></image>
-            <view class="article_user">曾兆育</view>
-            <view class="article_book">14:37</view>
-            <view class="article_book">2021-04-16</view>
-          </view>
-          <view class="article_body">
-            <view class="article_text"  bindtap="details">
-              曾经那个愿为我千千万万次捡风筝的已经逝去，人生中错过了就不会 再得到，也许我们会忏悔，会救赎，但这些似乎都已经晚了。
-            </view>
-            <view class="article_bookcap">
-              <image class="article_bookphoto" src="/ative/profileimg/book.png"></image>
-              <view class="book_message">
-                <view class="book_title">挪威的森林</view>
-                <view class="book_writer">村上春树</view>
-              </view>
-              <image class="article_bookgo" src="/ative/profileimg/go.png"></image>
-            </view>
-          </view>
-        </view>
-        
+      </block>
+      </scroll-view>
   </swiper-item>
 </swiper>
+<view class="issue" bindtap="issuearticle">+</view>

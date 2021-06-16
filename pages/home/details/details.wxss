@@ -11,16 +11,22 @@ pages/details/details.wxss
 }
 .sm{
     float: left;
-    font-size: 36rpx;
-    margin-top: 70rpx;
-    margin-left: 50rpx;
+    font-size: 30rpx;
+    margin-top: 120rpx;
+    margin-left: 20rpx;
 }
 .zz{
     float: left;
-    margin-top: 140rpx;
-    margin-left: -70rpx;
+    margin-left: 20rpx;
     font-size: 30rpx;
     color: silver;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    width: 300rpx;
 }
 .pf{
     float: left;
@@ -29,8 +35,7 @@ pages/details/details.wxss
 }
 .xj{
   float: left;
-  margin-left: -210rpx;
-  margin-top: 200rpx;
+  margin-left: 20rpx;
 }
 .fs{
   float: left;
@@ -59,6 +64,12 @@ pages/details/details.wxss
   padding-top: 10rpx;
   padding-left: 20rpx;
   font-size: 32rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 .sp{
   margin-top: 50rpx;
@@ -136,7 +147,7 @@ pages/details/details.wxss
     height: 50rpx;
     border: 1px blue solid;
     border-radius: 20rpx;
-    margin-top: 60rpx;
+    margin-top: 20rpx;
     position: absolute;
     margin-left: 600rpx;
     text-align: center;

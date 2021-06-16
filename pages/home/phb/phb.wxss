@@ -11,7 +11,7 @@ page{
 }
 .container{
   width: 92%;
-  height: 1700rpx;
+  height: 9200rpx;
   background: white;
   margin-left: 4%;
   margin-top: 3%;
@@ -24,20 +24,44 @@ page{
   float: left;
 }
 .sm{
-  float: left;
+  margin-left: 30rpx;
+  font-size: 36rpx;
   margin-top: 40rpx;
-  margin-left: 20rpx;
-  font-size: 38rpx;
+  float: left;
+  width: 200rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
 }
 .zz{
   float: left;
   margin-top: 100rpx;
-  margin-left: -80rpx;
+  margin-left: 310rpx;
+  position: absolute;
+  display: -webkit-box;
+  overflow: hidden;
+  width: 200rpx;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .jianjie{
   float: left;
+  width: 350rpx;
   margin-left: 20rpx;
-  margin-top: 15rpx;
+  position: relative;
+    margin-top: 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .dy{
   width: 100rpx;
@@ -47,4 +71,18 @@ page{
 }
 .er{
   float: left;
+}
+.phjj{
+   float: left;
+  width: 350rpx;
+  margin-left: 300rpx;
+  position: relative;
+    margin-top: -140rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
 }

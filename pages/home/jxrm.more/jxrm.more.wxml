@@ -1,0 +1,20 @@
+<view class="title">精选热门</view>
+<view wx:for="{{allbook}}">  <view class="jxjj">
+    <image src="{{item.Bookimgurl}}" class="jxhs"></image>
+    <view class="jj">
+      <view class="jjsm">{{item.BookName}}</view>
+      <view class="jjpf">
+        <view style="float: left;">
+          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+        </view>
+        <view class="xj">10.0分</view>
+      </view>
+      <view class="zz">{{item.Author}}</view>
+      <view class="jianjie">{{item.BookIntroduce}}</view>
+    </view>
+  </view>
+</view>

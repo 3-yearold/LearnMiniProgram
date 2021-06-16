@@ -2,7 +2,32 @@ App({
   globalData: {
     openid: null,
     addrees: 'http://xinyun.1473.cn/Request.php',
-    userInfo: null
+    userInfo: null,
+    bookno: null,
+    booktype:{
+      A : '马克思主义、列宁主义、毛泽东思想、邓小平理论',
+      B : '哲学、宗教',
+      C : '社会科学总论',
+      D : '政治、法律',
+      E : '军事',
+      F : '经济',
+      G : '文化、科学、教育、体育',
+      H : '语言、文字',
+      I : '文学',
+      J : '艺术',
+      K : '历史、地理',
+      N : '自然科学总论',
+      O : '数理科学和化学',
+      P : '天文学、地球科学',
+      Q : '生物科学',
+      R : '医药、卫生',
+      S : '农业科学',
+      T : '工业技术',
+      U : '交通运输',
+      V : '航空、航天',
+      X : '环境科学、劳动保护科学（安全科学）',
+      Z : '综合性图书',
+    }
   },
   onLaunch : function() {
     const that = this;
@@ -10,7 +35,7 @@ App({
       success(res) {	
         if (res.code) {
           //登陆成功并成功返回code便发起网络请求获得OPENID
-          console.log(res.code)
+          // console.log(res.code)
           wx.request({
             url: 'https://api.weixin.qq.com/sns/jscode2session' ,
             data:{
@@ -21,7 +46,7 @@ App({
             },
             method : "GET",
             success:function(res){
-              console.log(that)
+              // console.log(that)
               that.globalData.openid = res.data.openid
               wx.request({
                 url: that.globalData.addrees,
@@ -34,11 +59,12 @@ App({
                 },
                 success: (r) => {
                   if(r.data[0]){
+                    // console.log(r)
                     wx.switchTab ({
                       url: '/pages/home/index/index'
                     })
-                  }else{
-                    wx.navigateTo({
+                  }else {
+                    wx.navigateTo ({
                       url: '/pages/index/index'
                     })
                   }
@@ -64,12 +90,19 @@ App({
               if (that.userInfoReadyCallback) {
                 that.userInfoReadyCallback(res)
               }
-              console.log(that.globalData.userInfo)
+              // console.log(that.globalData.userInfo)
             }
           })
         }
       }
     })
+  },
+  bookclassify : function (type) {
+    console.log(type)
+    console.log(this.globalData.booktype[type])
+  },
+  findKey: function (obj,value, compare = (a, b) => a === b) {
+      return Object.keys(obj).find(k => compare(obj[k], value))
   }
 })
 

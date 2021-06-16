@@ -6,11 +6,11 @@ Page({
    */
   data: {
     stars: [0, 1, 2, 3, 4],
-    normalSrc: '/ative/shareimg/no-star.png',
-    selectedSrc: '/ative/shareimg/star.png',
-    halfSrc: '/ative/shareimg/star.png',
-    icon_like: '/ative/shareimg/loves.png',
-    icon_unlike: '/ative/shareimg/love.png',
+    normalSrc: 'http://xinyun.1473.cn/ative/shareimg/no-star.png',
+    selectedSrc: 'http://xinyun.1473.cn/ative/shareimg/star.png',
+    halfSrc: 'http://xinyun.1473.cn/ative/shareimg/star.png',
+    icon_like: 'http://xinyun.1473.cn/ative/shareimg/loves.png',
+    icon_unlike: 'http://xinyun.1473.cn/ative/shareimg/love.png',
   },
 
   /**

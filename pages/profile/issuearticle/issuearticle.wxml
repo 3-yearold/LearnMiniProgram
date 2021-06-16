@@ -1,0 +1,12 @@
+<view class="header-avatar" bindtap="bindViewTap" style="width: 50rpx;display: inline-block;float: left">
+  <open-data type="userAvatarUrl" class="user"></open-data>
+</view>
+  <open-data class="header-nickname" type="userNickName" style="line-height: 50rpx"></open-data>
+<form bindsubmit="bindFormSubmit">
+  <view class='evaluation_concent'>
+    <textarea name="concent" maxlength="-1" placeholder="觉得这件商品如何，快来说几句吧啊啊啊啊啊啊啊啊啊啊啊啊啊" value="{{concent}}" style="border: 1rpx black solid; width: 98%"></textarea>
+  </view> 
+  <button class='big-btn' form-type="submit" bindtap="fabiao">发表</button>
+</form>
+
+<view>{{concent1}}</view>

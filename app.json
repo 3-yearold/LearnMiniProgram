@@ -1,16 +1,17 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/home/index/index",
+    "pages/index/index",
     "pages/home/classification/classification",
     "pages/home/details/details",
     "pages/home/phb/phb",
     "pages/profile/personal/personal",
-    "pages/profile/profile/profile",
+    "pages/profile/issuearticle/issuearticle",
     "pages/share/category/category",
     "pages/share/details/details",
     "pages/share/search/search",
-    "pages/share/profile/profile"
+    "pages/share/profile/profile",
+    "pages/profile/search/search"
   ],
   "window": {
     "navigationBarBackgroundColor": "#5ba7fc",

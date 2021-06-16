@@ -1,0 +1,7 @@
+<view class="title">精选热门</view>
+<view wx:for="{{allbook}}"> 
+<view class="haoshu" >
+  <image src="{{item.Bookimgurl}}" class="hs"></image>
+  <view class="sm">{{item.BookName}}</view>
+</view>
+</view>

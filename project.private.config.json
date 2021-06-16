@@ -35,6 +35,23 @@
           "pathName": "pages/profile/personal/personal",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/home/aaa/aaa",
+          "pathName": "pages/home/aaa/aaa",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/profile/issuearticle/issuearticle",
+          "pathName": "pages/profile/issuearticle/issuearticle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/share/aaa/aaa",
+          "pathName": "pages/share/aaa/aaa",
+          "scene": null
         }
       ]
     }

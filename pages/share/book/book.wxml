@@ -1,7 +1,7 @@
 <view class="book">
   <view class="book_book">
     <view class="hot_book_box">
-      <image src="/ative/shareimg/book2.png" class="book2"></image>
+      <image src="http://xinyun.1473.cn/ative/shareimg/book2.png" class="book2"></image>
       <view class="book_card">
         <text class="book_name">活着</text>
         <text class="book_writer">余华 | 长篇小说</text>

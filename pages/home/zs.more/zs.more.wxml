@@ -1,0 +1,9 @@
+<view class="title">专属推荐</view>
+<scroll-view>
+      <view wx:for="{{allbook}}" >
+        <view class="haoshu">
+          <image src="{{item.Bookimgurl}}" class="hs"></image>
+          <view class="sm">{{item.BookName}}</view>
+        </view>
+      </view>
+</scroll-view>

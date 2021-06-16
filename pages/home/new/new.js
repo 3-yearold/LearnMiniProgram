@@ -62,5 +62,34 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  
+  passQuery: function(e){
+
+    // 传递的参数
+    let query = e.currentTarget.dataset['bookno'];
+    wx.navigateTo({
+      url: '/pages/home/details/details?bookno=' + query
+    })
+
+},
+
+  onLoad: function(options){
+    wx.request({
+      url: 'http://xinyun.1473.cn/Request.php',
+      method: 'POST',
+      data: {
+        res: 'select_allbook'
+      },
+      header: {
+        'content-type' : 'application/x-www-form-urlencoded'
+      },
+      success:(res)=>{
+        const allbook =res.data;
+        this.setData({
+          allbook:allbook
+        })
+      },
+    })
+  },
 })

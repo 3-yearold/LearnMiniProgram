@@ -1,5 +1,5 @@
 // pages/search/search.js
-var app =getApp();
+var app = getApp();
 var search = ''
 
 Page({
@@ -8,57 +8,87 @@ Page({
    * 页面的初始数据
    */
   data: {
+    history:true,
     historyList: [],     // 历史记录
-    content_Show:true,
-    phbook:[],
-    search:[],
-    ph:[],
+    content_Show: true,
+    rankinglist: [],
+    search: [],
+    ph: [],
+    hotspot:true
   },
 
-  changeSearch: function(e) {
+  changeSearch: function (e) {
     let that = this;
     var inputSearch = e.detail.value;
-    that.setData({
-      search: inputSearch
-    })
-    console.log(e)
-    wx.request({
-      url: 'http://xinyun.1473.cn/Request.php',
-      method:'POST',
-      data:{
-        res:'select_somebook,' + inputSearch
-      },
-      header:{
-        'content-type':'application/x-www-form-urlencoded'
-      },
-      success: (result) => {
-        console.log(result)
-      },
-    })
+    console.log(inputSearch);
+    if (inputSearch ==''){
+      wx.request({
+        url: 'http://xinyun.1473.cn/Request.php',
+        method: 'POST',
+        data: {
+          res: 'select_somebook,'+ inputSearch
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: (res) => {
+          const rankinglist = res.data;
+          this.setData({
+            rankinglist: rankinglist,
+            history:true,
+            hotspot:true
+          })
+          
+        },
+      })
+    }
+    else{
+      that.setData({
+        history:false,
+        hotspot:false
+      })
+      wx.request({
+        url: 'http://xinyun.1473.cn/Request.php',
+        method: 'POST',
+        data: {
+          res: 'select_somebook,'+ inputSearch
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: (res) => {
+          const rankinglist = res.data;
+          this.setData({
+            rankinglist: rankinglist
+          })        
+        },
+      })
+    }
+  
   },
 
-searchinput:function(e){
-  
-},
+  searchinput: function (e) {
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     wx.request({
       url: 'http://xinyun.1473.cn/Request.php',
-      method:'POST',
-      data:{
-        res:'select_somebook,'
+      method: 'POST',
+      data: {
+        res: 'select_somebook,'
       },
-      header:{
-        'content-type':'application/x-www-form-urlencoded'
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
       },
       success: (res) => {
-        console.log(res)
-        const phbook = res.data;
+        const rankinglist = res.data;
         this.setData({
-          phbook : phbook
+          rankinglist: rankinglist
         })
+        
       },
     })
   },

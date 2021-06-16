@@ -1,29 +1,8 @@
-<!--index.wxml-->
 <view class="top">
-  <!-- <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
   <view class="ss">
     <navigator url="../../share/search/search">
     <view>
-      <image src="/ative/homeimg/search.jpg/" class="ssicon"></image>
+      <image src="http://xinyun.1473.cn/ative/homeimg/search.jpg/" class="ssicon"></image>
       <view class="gjz"><input>搜索好书/读者</input></view>
     </view>
   </navigator>
@@ -38,199 +17,93 @@
   <view class="gg">
     <swiper indicator-dots indicator-color="#fff" indicator-active-color="blue" autoplay interval="3000" circular>
       <swiper-item>
-        <image src="/ative/homeimg/banner.jpg" class="banner"></image>
+        <image src="http://xinyun.1473.cn/ative/homeimg/banner.jpg" class="banner"></image>
       </swiper-item>
       <swiper-item>
-        <image src="/ative/homeimg/banner.jpg" class="banner"></image>
+        <image src="http://xinyun.1473.cn/ative/homeimg/banner.jpg" class="banner"></image>
       </swiper-item>
       <swiper-item>
-        <image src="/ative/homeimg/banner.jpg" class="banner"></image>
+        <image src="http://xinyun.1473.cn/ative/homeimg/banner.jpg" class="banner"></image>
       </swiper-item>  
     </swiper>
   </view>
 <view class="fl">
   <view class="flbox">
-    <navigator url="/pages/home/phb/phb"><image src="/ative/homeimg/paihangbang.jpg" class="flimg"></image>
+    <navigator url="/pages/home/phb/phb"><image src="http://xinyun.1473.cn/ative/homeimg/排行榜.png" class="flimg"></image>
     <view class="fltext">排行榜</view>
     </navigator>
   </view>
   <view class="flbox">
-    <navigator url="/pages/home/new/new"><image src="/ative/homeimg/zuixin.jpg" class="flimg"></image>
+    <navigator url="/pages/home/new/new"><image src="http://xinyun.1473.cn/ative/homeimg/最新.png" class="flimg"></image>
     <view class="fltext">最新上架</view>
   </navigator>
   </view>
   <view class="flbox">
-    <navigator url="/pages/home/classification/classification"><image src="/ative/homeimg/fenlei.jpg" class="flimg"></image>
+    <navigator url="/pages/home/classification/classification"><image src="http://xinyun.1473.cn/ative/homeimg/分类.png" class="flimg"></image>
     <view class="fltext">分类</view>
   </navigator>
   </view>
   <view class="flbox">
-    <image src="/ative/homeimg/gonggao.jpg" class="flimg"></image>
+    <image src="http://xinyun.1473.cn/ative/homeimg/公告.png" class="flimg"></image>
     <view class="fltext">公告</view>
   </view>
 </view>
 </view>
 <view class="zs">
   <view class="zstj">专属推荐</view>
-  <view class="more">更多></view>
+  <navigator url="/pages/home/zs.more/zs.more"><view class="more">更多></view></navigator>
 </view>
+<scroll-view>
+      <view wx:for="{{allbook}}">
+        <block wx:if="{{index < 3}}">
+        <view class="haoshu" bindtap="passQuery" data-bookno="{{item.BookNo}}">
+          <image src="{{item.Bookimgurl}}" class="hs"></image>
+          <view class="sm">{{item.BookName}}</view>
+        </view>
 
-<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" >
-
-  <view style=" display: inline-block" >
-    <navigator url="../../home/details/details">
-    <view class="haoshu">
-  <image src="/ative/homeimg/hz.jpg" class="hs"></image>
-  <view class="sm">活着</view>
-</view>
-</navigator>
-  </view>
-  
-
-  <view style=" display: inline-block">
-    <view class="haoshu">
-  <image src="/ative/homeimg/pdsdj.jpg" class="hs"></image>
-  <view class="sm">坡道上的家</view>
-</view>
-</view>
-
-  <view style="display: inline-block">
-    <view class="haoshu">
-  <image src="/ative/homeimg/lbqdgcb.jpg" class="hs"></image>
-  <view class="sm">了不起的盖茨比</view>
-</view>
-  </view>
-
-  <view style=" display: inline-block">
-    <view class="haoshu">
-      <image src="/ative/homeimg/hdlz.jpg" class="hs"></image>
-      <view class="sm">哈德良传</view>
+        </block>
     </view>
-  </view>
-  <view style=" display: inline-block">
-    <view class="haoshu">
-      <image src="/ative/homeimg/qjfs.jpg" class="hs"></image>
-      <view class="sm">全境封锁</view>
-    </view>
-  </view>
-  <view style=" display: inline-block">
-    <view class="haoshu">
-      <image src="/ative/homeimg/tydjd.jpg" class="hs"></image>
-      <view class="sm">讨厌的京都</view>
-    </view>
-  </view>
 
 </scroll-view>
 <view class="zs">
   <view class="zstj">精选热门</view>
-  <view class="more">更多></view>
+  <navigator url="/pages/home/jxrm.more/jxrm.more"><view class="more">更多></view></navigator>
 </view>
-<view class="jxjj">
-    <image src="/ative/homeimg/ylylbs.jpg" class="jxhs"></image>
+<view wx:for="{{allbook}}">
+  <block wx:if="{{index <5}}">
+  <view class="jxjj" bindtap="passQuery" data-bookno="{{item.BookNo}}">
+    <image src="{{item.Bookimgurl}}" class="jxhs"></image>
     <view class="jj">
-      <view class="jjsm">月亮与六便士</view>
+      <view class="jjsm">{{item.BookName}}</view>
       <view class="jjpf">
         <view style="float: left;">
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="http://xinyun.1473.cn/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="http://xinyun.1473.cn/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="http://xinyun.1473.cn/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="http://xinyun.1473.cn/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
+          <image src="http://xinyun.1473.cn/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
         </view>
         <view class="xj">10.0分</view>
       </view>
-      <view class="zz">[英] 毛姆 | 长篇小说</view>
-      <view class="jianjie">恩特里克兰德是个在伦敦做事</view>
-      <view class="jianjie">的证券经纪人，他有个富裕</view>
-      <view class="jianjie">和美满的家庭:妻子漂亮...</view>
+      <view class="zz">{{item.Author}}</view>
+      <view class="jianjie">{{item.BookIntroduce}}</view>
     </view>
+  </view>
+</block>
 </view>
-<view class="jxjj" style="margin-top: 30px;">
-    <image src="/ative/homeimg/pdsdj.jpg" class="jxhs"></image>
-    <view class="jj">
-      <view class="jjsm">坡道上的家</view>
-      <view class="jjpf">
-        <view style="float: left;">
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/star.jpg" class="pf"></image>
-        </view>
-        <view class="xj">9.0分</view>
-      </view>
-      <view class="zz">[英] 毛姆 | 长篇小说</view>
-      <view class="jianjie">恩特里克兰德是个在伦敦做事</view>
-      <view class="jianjie">的证券经纪人，他有个富裕</view>
-      <view class="jianjie">和美满的家庭:妻子漂亮...</view>
-    </view>
-</view>
-<view class="jxjj" style="margin-top: 30px;">
-    <image src="/ative/homeimg/lbqdgcb.jpg" class="jxhs"></image>
-    <view class="jj">
-      <view class="jjsm">了不起的盖茨比</view>
-      <view class="jjpf">
-        <view style="float: left;">
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-          <image src="/ative/homeimg/xingxingshixin.jpg" class="pf"></image>
-        </view>
-        <view class="xj">9.0分</view>
-      </view>
-      <view class="zz">[英] 毛姆 | 长篇小说</view>
-      <view class="jianjie">恩特里克兰德是个在伦敦做事</view>
-      <view class="jianjie">的证券经纪人，他有个富裕</view>
-      <view class="jianjie">和美满的家庭:妻子漂亮...</view>
-    </view>
-</view>
+
 <view class="zs">
   <view class="zstj">热门书单</view>
-  <view class="more">更多></view>
+  <navigator url="/pages/home/rm.more/rm.more"><view class="more">更多></view></navigator>
 </view>
 <view class="tuijian">
-<view class="haoshu">
-  <image src="/ative/homeimg/ylylbs.jpg" class="hs"></image>
-  <view class="sm">月亮与六便士</view>
+<view wx:for="{{allbook}}"> 
+  <block wx:if="{{index<9}}">
+<view class="haoshu" bindtap="passQuery" data-bookno="{{item.BookNo}}" >
+  <image src="{{item.Bookimgurl}}" class="hs"></image>
+  <view class="sm">{{item.BookName}}</view>
 </view>
-<view class="haoshu">
-  <image src="/ative/homeimg/pdsdj.jpg" class="hs"></image>
-  <view class="sm">坡道上的家</view>
-</view>
-<view class="haoshu">
-  <image src="/ative/homeimg/lbqdgcb.jpg" class="hs"></image>
-  <view class="sm">了不起的盖茨比</view>
+</block>
 </view>
 </view>
-<view class="tuijian">
-<view class="haoshu">
-  <image src="/ative/homeimg/sy.png" class="hs"></image>
-  <view class="sm">鼠疫</view>
-</view>
-<view class="haoshu">
-  <image src="/ative/homeimg/qjfs.jpg" class="hs"></image>
-  <view class="sm">全境封锁</view>
-</view>
-<view class="haoshu">
-  <image src="/ative/homeimg/my.jpg" class="hs"></image>
-  <view class="sm">民谣</view>
-</view>
-</view>
-<view class="tuijian">
-<view class="haoshu">
-  <image src="/ative/homeimg/ylylbs.jpg" class="hs"></image>
-  <view class="sm">月亮与六便士</view>
-</view>
-<view class="haoshu">
-  <image src="/ative/homeimg/pdsdj.jpg" class="hs"></image>
-  <view class="sm">坡道上的家</view>
-</view>
-<view class="haoshu">
-  <image src="/ative/homeimg/lbqdgcb.jpg" class="hs"></image>
-  <view class="sm">了不起的盖茨比</view>
-</view>
-</view>
-
-
 

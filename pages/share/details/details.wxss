@@ -200,12 +200,10 @@ page {
 .comment_name{
   font-size: 25rpx;
     color: #a8a8a8;
-    float: left;
 }
 
 
 .comment_details{
-  float: left;
   font-size: 27rpx;
   margin-top: 10rpx;
 }
@@ -235,6 +233,7 @@ page {
   height: 65rpx;
   float: left;
   margin-left: 25rpx;
+  overflow: hidden;
 }
 
 .comment_search_group>input {
@@ -242,6 +241,14 @@ page {
   width: 75%;
   margin-left: 30rpx;
   color: #a8a8a8;
+}
+
+.comment_search_group_button{
+  width: 110rpx;
+  height: 100%;
+  line-height: 65rpx;
+  background-color: #cecece;
+  text-align: center;
 }
 
 .article_footer{

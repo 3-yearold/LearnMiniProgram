@@ -70,7 +70,6 @@
 }
 .flbox{
   width: 120rpx;
-  background: rgb(62, 144, 248);
   height: 120rpx;
   border-radius: 50%;
   float: left;
@@ -80,15 +79,15 @@
   line-height: 190rpx;
 }
 .fltext{
-  margin-top: -120rpx;
+  margin-top: -140rpx;
   color: #000000;
   font-size: 32rpx;
   text-align: center;
   margin-right: -8rpx;
 }
 .flimg{
-  width: 80rpx;
-  height: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
 }
 .zs{
   width: 100%;
@@ -119,11 +118,17 @@
 }
 .haoshu{
   float: left;
-  display: inline-block;
+  width: 30%;
 }
 .sm{
   margin-left: 40rpx;
   font-size: 30rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .jxhs{
   width: 240rpx;
@@ -134,9 +139,9 @@
   float: left;
 }
 .jxjj{
-  width: 90%;
+  width: 95%;
   margin: 20rpx;
-  height: 300rpx;
+  height: 330rpx;
   background: #fff;
   border-radius: 20rpx; 
   box-shadow:0 0 2rpx 2rpx #000;
@@ -148,6 +153,13 @@
 .jjsm{
   font-size: 30rpx;
   margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  width: 300rpx;
 }
 .jjpf{
   height: 40rpx;
@@ -163,11 +175,18 @@
   float: left;
 }
 .zz{
-  font-size: 28rpx;
+  font-size: 25rpx;
   /* float: left; */
 }
 .jianjie{
   font-size: 28rpx;
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
 }
 .swiper-tab {
   width: 100%;

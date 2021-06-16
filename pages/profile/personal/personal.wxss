@@ -56,7 +56,7 @@
 }
 .main{
   width: auto;
-  height: 1000rpx;
+  height: 800rpx;
 }
 /* 卡片 */
 
@@ -68,7 +68,7 @@
   margin-left: 5%;
   box-shadow: 0rpx 0rpx 15rpx 5rpx #f2f2f2;
   border-radius: 10rpx;
-  height: 30%;
+  height: 40%;
 }
 
 .article_head {
@@ -218,8 +218,8 @@
 .circle{
   float: left;
   margin: 3%;
-  width: 50rpx;
-  height: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 .num1{
   word-break:break-all;
@@ -271,13 +271,6 @@
   display: flex;
   position: relative;
 }
-.card_bookphotp{
-  float: left;
-  width: 18%;
-  height: 92%;
-  margin-left: 3%;
-  border-radius: 5%;
-}
 .cardcontent{
   width: 80%;
   height: 75%;
@@ -304,15 +297,15 @@
 .borrowbook{
   margin-top:2%;
   width: 100%;
-  height: 200rpx;
+  height: 250rpx;
   display:flex;
   align-items:center;
-  /* background-color: aquamarine; */
+  border-bottom:1px #cbcbcb solid;
 }
 .borrow_bookphotp{
   float: left;
-  width: 18%;
-  height: 92%;
+  width: 20%;
+  height:90%;
   margin-left:7%;
   border-radius: 5%;
   margin-right: 4%;
@@ -337,10 +330,18 @@
 .borrow_title{
   font-weight: bold;
   font-size:38rpx;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 .borrow_write{
   color: #3c3c3c;
   font-size:30rpx;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 .borrow_time{
   color: #999999;
@@ -367,7 +368,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color:#0083ff;
+  color:#0083ff !important;
   padding: 5rpx 28rpx;
   border-radius: 39rpx;
   margin: 0;
@@ -395,15 +396,126 @@
   margin-left: 9rpx;
   margin-right: 9rpx;
 }
-.recordbook{
-  margin-left: 8%;
+
+.bg_white{
+  background-color: #fff;
 }
-.record{
-  width: 20%;
-  /* background-color: #552c2c; */
-  font-size: 40rpx;
-  margin: 2%;
+.bg_blue{
+  background-color:#0083ff;
+}
+
+/* 列表布局 */
+
+.movable-area {
+  width: 100%;
+  height: 250rpx;
+}
+
+.movable-view {
+  width: 100%;
+  height: 100%;
+}
+
+.touch-item {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+.getcontent {
+  width: 100%;
+  margin-right: 0;
+  padding: 10rpx 10rpx 10rpx 30rpx;
+  /* box-sizing: border-box; */
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx);
+  margin-left: -180rpx;
+  overflow: hidden;
+  display:flex;
+  align-items:center;
+  border-bottom:1px #cbcbcb solid;
+}
+.del {
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(180rpx);
+  transform: translateX(180rpx);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.touch-move-active .getcontent, .touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.attendance_text > view {
+  margin-bottom: 8rpx;
+  color: #828282;
+  white-space: nowrap;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+}
+/* 
+.attendance_text_r {
+  flex-grow: 1;
+} */
+.card_bookphotp{
+  float: left;
+  width: 20%;
+  height: 92%;
+  /* margin-left: 3%; */
+  border-radius: 5%;
+}
+.cardcontent{
+  width: 80%;
+  height: 75%;
+  display:flex;
+  flex-direction: column;
+  align-items:left;
+  margin-left: 3%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* background-color: #f4f4f4; */
+}
+.card_booktitle{
+  font-size:35rpx;
+}
+.card_bookwrite{
+  color: #3c3c3c;
+  font-size:30rpx;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.card_bookmesssge{
+  color: #999999;
+  font-size: 28rpx;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.issue {
+  position: fixed;
+  display: flex;
+  bottom: 40rpx;
+  right: 40rpx;
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #0083ff;
+  color: #fff;
+  font-size: 100rpx;
+  font-weight: 400;
+  line-height: 80rpx;
+  justify-content: center;
+  border-radius: 90rpx;
 }

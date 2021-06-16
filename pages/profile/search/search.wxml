@@ -1,0 +1,18 @@
+
+<view class="good">
+  <text style="font-size: 40rpx; float: left; width: 100%;">精选热门</text>
+  <!-- <scroll-view scroll-y="true"> -->
+  <block wx:for="{{phbook}}">
+    <view class="hot_book_box" catchtap="catchTapissuearticle" data-bookno="{{item.BookNo}}">
+      <text style="float: left; margin-right: 25rpx">{{index+1}}</text>
+      <image src="{{item.Bookimgurl}}" class="book2"></image>
+      <view class="book_card">
+        <text>{{item.BookName}}</text>
+        <text class="book_writer">{{item.Author}}</text>
+        <text class="book_body">{{item.BookIntroduce}}</text>
+      </view>
+    </view>
+  </block>
+
+  <!-- </scroll-view> -->
+</view>

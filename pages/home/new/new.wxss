@@ -18,26 +18,44 @@ page{
 }
 .sm{
   float: left;
-  font-size: 40rpx;
+  font-size: 34rpx;
   margin-left: 50rpx;
   margin-top: 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 350rpx;
 }
 .zz{
-  padding-top: 80rpx;
   float: left;
-  margin-left: -80rpx;
+  margin-left: 50rpx;
   color: #919191;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 250rpx;
 }
 .jianjie{
   float: left;
   width: 95%;
   margin: 2.5%;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .new{
   width: 60rpx;
   height: 60rpx;
   margin-left: 110rpx;
-  margin-top: 20rpx;
 }
 .yzz{
   float: left;

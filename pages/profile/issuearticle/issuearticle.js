@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/profile/issuearticle/issuearticle.js
 const app = getApp()
 Page({
 
@@ -6,41 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    info: null
-  },
-  formSubmit: function (e) {
-    const that = this
-    console.log('form发生了submit事件，携带数据为：', e.detail, app.globalData.openid);
-    that.info = "insert_reader,"+app.globalData.openid
-    for(var i in e.detail.value) {
-      that.info += "," + e.detail.value[i]
-    }
-    that.info += ',' + app.globalData.userInfo.avatarUrl
-    console.log(that.info)
-    wx.request({
-      url: app.globalData.addrees,
-      method: 'POST',
-      data: {
-        res: that.info
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      success: (r) => {
-        wx.showToast({
-          title: '操作成功！', // 标题
-          icon: 'success',  // 图标类型，默认success
-          duration: 1500,  // 提示窗停留时间，默认1500ms
-          success: function (){
-            setTimeout(function () {
-              wx.reLaunch({
-                url: '/pages/home/index/index',
-              })
-            }, 1000);
-          }
-        })
-      }
-    })
+    concent: null,
   },
 
   /**
@@ -49,7 +15,35 @@ Page({
   onLoad: function (options) {
 
   },
-
+  bindFormSubmit : function(event){
+    const content = event.detail.value.concent.replace (/[,，]/g,'\/逗号/\\').replace(/\n/g,  "<br>")
+    console.log('insert_article,' + app.globalData.openid + ',' + app.globalData.bookno + ',' + content)
+    wx.request({
+      url: 'http://xinyun.1473.cn/Request.php',
+      method: 'POST',
+      data : {
+        res : 'insert_article,' + app.globalData.openid + ',' + app.globalData.bookno + ',' + content
+      },
+      header:{
+        'content-type':'application/x-www-form-urlencoded'
+      },
+      success : (result) => {
+        console.log(result)
+        wx.showToast({
+          title: '操作成功！', // 标题
+          icon: 'success',  // 图标类型，默认success
+          duration: 1500,  // 提示窗停留时间，默认1500ms
+          success: function (){
+            setTimeout(function () {
+              wx.reLaunch({
+                url: '/pages/share/category/category',
+              })
+            }, 1000);
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

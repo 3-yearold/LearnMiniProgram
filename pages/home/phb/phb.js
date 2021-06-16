@@ -62,5 +62,24 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  
+  onLoad: function(options){
+    wx.request({
+      url: 'http://xinyun.1473.cn/Request.php',
+      method: 'POST',
+      data: {
+        res: 'select_allbook'
+      },
+      header: {
+        'content-type' : 'application/x-www-form-urlencoded'
+      },
+      success:(res)=>{
+        const allbook =res.data;
+        this.setData({
+          allbook:allbook
+        })
+      },
+    })
+  },
 })
